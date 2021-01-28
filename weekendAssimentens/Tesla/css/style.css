@@ -112,13 +112,41 @@ body,html{
 .bg1 .center-bottom .spec{
   
   display:inline-block;
-  padding-left: 100px;
+  padding-left: 30px;
   padding-right: 30px;
   font-size: 28px;
   line-height: 36px;
   
 }
-.line{
-  border-left: 100px solid #000;
-  
+.bg1 .center-bottom .spec a{
+  font-size: 18px;
+  inline-size: 160px;
+  line-height: 14.5px;
+  max-inline-size: 400px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  text-decoration-color: #fff;
+  text-decoration-style: solid;
+  text-size-adjust: 100%;
+  border: #fff 3px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: initial;
+  color: #FFFFFF;
 }
+
+  .line{
+    display:inline-block;
+    position: absolute;
+    height:  50%;
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 20px;
+    border-left: 1px solid #fff;
+    
+    }
