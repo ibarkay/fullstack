@@ -98,14 +98,27 @@ body,html{
   margin-top: 80px;
 }
 
-.bg1 .center-botton{
-  border: 10px solid black;
+.bg1 .center-bottom{
+  /* border: 10px solid black; */
+  text-align: center;
   position: absolute;
+  top:50vh;
   width: 100%;
   height: 116px;
-  margin-top: 240px;
+  /* margin-top: 50%; */
+  
+  
 }
-.bg1 .center-botton h3{
-  float: left;
-  display: inline-block;
+.bg1 .center-bottom .spec{
+  
+  display:inline-block;
+  padding-left: 100px;
+  padding-right: 30px;
+  font-size: 28px;
+  line-height: 36px;
+  
+}
+.line{
+  border-left: 100px solid #000;
+  
 }
