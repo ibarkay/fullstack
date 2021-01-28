@@ -3,14 +3,26 @@
   box-sizing: border-box;
 } 
 @font-face {
-  font-family: GotBold;
-  src: url(../fonts/Gotham\ Bold.otf);
+  font-family: "Gotham1";
+  src: url(../fonts/GothamBook.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: GotMed;
-  src: url(../fonts/Gotham\ Bold.otf);
+  font-family: "Gotham2";
+  src: url(../fonts/GothamMedium.ttf) format("truetype");
   font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Gotham3";
+  src: url(../fonts/GothamBold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 a{
   border: 0;
@@ -28,7 +40,8 @@ body,html{
     margin: 0;
     /* min-height: 100 vh; */
     padding: 0;
-    font-family: GotMed;
+    font-family:Gotham2 ;
+    /* font-weight: 700; */
     color: #FFFFFF;
     
     
@@ -85,13 +98,16 @@ body,html{
 }
 
 .bg1 svg{
-  float: left;
+  position: fixed;
+  left: 10px;
   width: 7%;
   margin-top: 3px;
   margin-left: 15px;
 }
 .main-page h1{
   font-size: 40px;
+  font-weight: 500;
+  font-family: 'Gotham2', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
   line-height: 48px;
   position: absolute;
   width: 100%;
@@ -102,14 +118,19 @@ body,html{
   /* border: 10px solid black; */
   text-align: center;
   position: absolute;
-  top:50vh;
+  top:70vh;
   width: 100%;
   height: 116px;
   /* margin-top: 50%; */
   
   
 }
+.bg1 .center-bottom .spec h3{
+  font-weight: 500;
+}
 .bg1 .center-bottom .spec{
+  font-weight: 500;
+  font-family: 'Gotham2', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
   
   display:inline-block;
   position: relative;
@@ -120,6 +141,8 @@ body,html{
   font-size: 28px;
   line-height: 36px;
   text-align: center;
+  /* font-weight: 500; */
+  /* font-family: 'Gotham2', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;; */
   
 }
 .bg1 .center-bottom .spec a{
@@ -143,6 +166,28 @@ body,html{
   text-align: initial;
   color: #FFFFFF;
 }
+.bg1 .center-bottom .spec a:hover{
+  font-size: 18px;
+  inline-size: 160px;
+  line-height: 14.5px;
+  max-inline-size: 400px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  text-decoration-color: #fff;
+  text-decoration-style: solid;
+  text-size-adjust: 100%;
+  border: #fff 3px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #fff;
+  text-decoration: none;
+  text-align: initial;
+  color:#333;
+
+}
 .bg1 .center-bottom .spec i{
   bottom: 4px;
     height: 21px;
@@ -165,6 +210,8 @@ body,html{
 }
 .bg1 .center-bottom .spec h2{
   font-size: 12px;
+  font-weight: 500;
+  font-family: 'Gotham2', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
   
   position: absolute;
   text-align: center;
