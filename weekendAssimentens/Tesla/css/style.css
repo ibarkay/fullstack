@@ -112,10 +112,14 @@ body,html{
 .bg1 .center-bottom .spec{
   
   display:inline-block;
+  position: relative;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 0;
+  padding-top: 0;
   font-size: 28px;
   line-height: 36px;
+  text-align: center;
   
 }
 .bg1 .center-bottom .spec a{
@@ -138,6 +142,37 @@ body,html{
   text-decoration: none;
   text-align: initial;
   color: #FFFFFF;
+}
+.bg1 .center-bottom .spec i{
+  bottom: 4px;
+    height: 21px;
+    inset-inline-start: 0;
+    overflow: hidden;
+    /* position: absolute; */
+    width: 40px;
+   /* position: absolute; */
+}
+.bg1 .center-bottom .spec .small-text{
+  width: 116px;
+  height: 18px;
+  top: 90px;
+  
+  position: absolute;
+  background-color: violet;
+  opacity: 0.4;
+  padding: 0;
+  margin: 0;
+}
+.bg1 .center-bottom .spec h2{
+  font-size: 12px;
+  
+  position: absolute;
+  text-align: center;
+  top : 75px;
+  text-size-adjust: 100%;
+  padding: 0;
+
+  line-height: 0;
 }
 
   .line{
