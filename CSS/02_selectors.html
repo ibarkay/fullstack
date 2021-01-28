@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS selectors</title>
+  <style>
+    /* Body styling - Element selector - tag selector */
+    body {
+      background-color: #333;
+    }
+    /* . is for class */
+    .primary-heading {
+      color: blue;
+    }
+    /* # is for IDs */
+    #welcome {
+      background-color: rgb(216, 204, 204);
+    }
+
+    /* multipe selectors */
+    #welcome , #about {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+
+    /* Nested selector */
+    #welcome p {
+      font-size: 20px;
+    }
+
+    #about {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome">
+    <h2 class="primary-heading">Wellcome</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat repellendus minus nemo quo nulla eum earum deleniti sunt eaque ullam.</p>
+  </div>
+  <div id="about">
+    <h2>About</h2> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint a corrupti, accusamus et, reprehenderit facere consectetur alias, consequuntur aut culpa!</p>
+  </div>
+</body>
+</html>

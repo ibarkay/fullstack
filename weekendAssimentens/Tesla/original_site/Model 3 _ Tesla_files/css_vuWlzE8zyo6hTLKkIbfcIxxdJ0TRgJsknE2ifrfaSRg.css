@@ -1,0 +1,2086 @@
+:root {
+    --media-height: 100vh
+}
+
+@media (max-width:1023px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) {
+        min-height: 100vh;
+        min-height: var(--media-height)
+    }
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-asset--mobile {
+    display: none
+}
+
+@media (max-width:639px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-asset--desktop {
+        display: none
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-asset--mobile {
+        display: block
+    }
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner {
+    max-height: 100vh;
+    min-height: 100vh
+}
+
+@media (max-width:1023px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner {
+        max-height: none;
+        position: relative
+    }
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image {
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2
+}
+
+@media (max-width:1023px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image {
+        min-height: 0
+    }
+}
+
+@media (max-width:839px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image {
+        width: 100%
+    }
+}
+
+@media (max-width:639px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image {
+        background-color: #f2f2f2;
+        height: 133.33333vw;
+        max-height: none
+    }
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 166.66667vh;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%
+}
+
+@media (min-width:1600px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        left: 50%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        right: 50%
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        inset-inline-start: 50%;
+        -webkit-transform: translateX(-50%) !important;
+        transform: translateX(-50%) !important
+    }
+
+    [dir=""] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        -webkit-transform: translateX(50%) !important;
+        transform: translateX(50%) !important
+    }
+}
+
+@media (min-width:1024px) and (max-width:1599px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        left: -12%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        right: -12%
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        width: 130%;
+        inset-inline-start: -12%
+    }
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture {
+    height: calc(60vw - 249px);
+    min-height: 0;
+    min-width: 0
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture .tcl-image,
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture img {
+    width: 100%;
+    height: auto
+}
+
+@media (max-width:1600px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture {
+        height: calc(75vw - 311.25px)
+    }
+}
+
+@media (max-width:1024px) and (min-width:1024px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture {
+        height: 75vw
+    }
+}
+
+@media (max-width:1023px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture {
+        height: 60vw
+    }
+}
+
+@media (max-width:639px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture {
+        -webkit-transform: none !important;
+        transform: none !important;
+        height: 100vw
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .hero-picture .tcl-image {
+        -webkit-margin-before: -3%;
+        margin-top: -3%
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations {
+    left: 0
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations,
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations {
+    right: 0
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations {
+    left: 0
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations {
+    bottom: 0;
+    inset-inline-start: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    inset-inline-end: 0;
+    top: 0
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li {
+    display: block;
+    line-height: 15px;
+    padding-bottom: 0;
+    position: absolute;
+    width: 100%
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations .annotations--heading,
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after,
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+    display: block;
+    position: absolute;
+    -webkit-transition: all 1s cubic-bezier(.23, 1, .32, 1);
+    transition: all 1s cubic-bezier(.23, 1, .32, 1)
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after,
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+    content: "";
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+    left: 3px
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+    right: 3px
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+    background-color: #000;
+    background-color: var(--tds-color--black);
+    bottom: 1px;
+    inset-inline-start: 3px;
+    top: 0;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    width: 3px
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+        -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .32, 1);
+        transition: -webkit-transform 1s cubic-bezier(.23, 1, .32, 1);
+        transition: transform 1s cubic-bezier(.23, 1, .32, 1);
+        transition: transform 1s cubic-bezier(.23, 1, .32, 1), -webkit-transform 1s cubic-bezier(.23, 1, .32, 1);
+        -webkit-transition-delay: .1s;
+        transition-delay: .1s;
+        width: 2px
+    }
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+        right: auto
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+        right: 3px
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+        left: 3px
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:before {
+        inset-inline-start: auto;
+        inset-inline-end: 3px
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+    left: 0
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+    right: 0
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+    background-color: #fff;
+    background-color: var(--tds-color--white);
+    border: 2px solid #000;
+    border: 2px solid var(--tds-color--black);
+    border-radius: 8px;
+    bottom: 0;
+    -webkit-box-sizing: initial;
+    box-sizing: initial;
+    height: 5px;
+    inset-inline-start: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    width: 5px
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+        border: 1px solid #000;
+        border: 1px solid var(--tds-color--black);
+        -webkit-box-sizing: initial;
+        box-sizing: initial;
+        height: 4px;
+        -webkit-transition: -webkit-transform .5s cubic-bezier(.23, 1, .32, 1);
+        transition: -webkit-transform .5s cubic-bezier(.23, 1, .32, 1);
+        transition: transform .5s cubic-bezier(.23, 1, .32, 1);
+        transition: transform .5s cubic-bezier(.23, 1, .32, 1), -webkit-transform .5s cubic-bezier(.23, 1, .32, 1)
+    }
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+        right: auto
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+        right: 0
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+        left: 0
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li:after {
+        inset-inline-start: auto;
+        inset-inline-end: 0
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+    left: 15px
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+    right: 15px
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+    font-size: 12px;
+    inset-inline-start: 15px;
+    line-height: inherit;
+    margin: 0;
+    opacity: 1;
+    padding-top: 0;
+    position: absolute;
+    top: -5px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+
+@media (min-width:1230px) {
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        font-size: 14px
+    }
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        right: auto
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        right: 15px
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        left: 15px
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        text-align: right
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        text-align: left
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li .annotations--heading {
+        font-size: 10px;
+        inset-inline-start: auto;
+        line-height: normal;
+        inset-inline-end: 15px;
+        text-align: end
+    }
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.cmp-animate--to_reveal:after,
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.cmp-animate--to_reveal:before {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0)
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.cmp-animate--to_reveal .annotations--heading {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px)
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.cmp-animate--to_reveal.cmp-animate--revealed:after,
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.cmp-animate--to_reveal.cmp-animate--revealed:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.cmp-animate--to_reveal.cmp-animate--revealed .annotations--heading {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--front {
+    left: 25%
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--front {
+    right: 25%
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--front {
+    height: 35%;
+    inset-inline-start: 25%;
+    max-width: 18%;
+    top: 16%
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--front {
+        left: 11%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--front {
+        right: 11%
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--front {
+        inset-inline-start: 11%;
+        max-width: 32%;
+        top: 17%
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--top {
+    left: 46%
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--top {
+    right: 46%
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--top {
+    height: 20%;
+    inset-inline-start: 46%;
+    max-width: 18%;
+    top: 6%
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--top {
+        left: 47%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--top {
+        right: 47%
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--top {
+        inset-inline-start: 47%;
+        max-width: 35%;
+        top: 1%
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+    left: 50%
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+    right: 50%
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+    height: 22%;
+    inset-inline-start: 50%;
+    top: 58%
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+    left: 15px
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+    right: 15px
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+    text-align: left
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+    text-align: right
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+    bottom: 0;
+    inset-inline-start: 15px;
+    padding: 0;
+    text-align: start;
+    top: auto
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+    left: 0
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+    right: 0
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+    inset-inline-start: 0;
+    top: 0
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+    left: 3px
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+    right: 3px
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+    right: auto
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+    left: auto
+}
+
+.hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+    bottom: 0;
+    inset-inline-start: 3px;
+    inset-inline-end: auto;
+    top: 1px
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+        right: auto
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+        right: 15%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+        left: 15%
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom {
+        height: 32%;
+        inset-inline-start: auto;
+        max-width: 30%;
+        inset-inline-end: 15%;
+        top: 62%
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+        right: 15px
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+        left: 15px
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+        text-align: right
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+        text-align: left
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom .annotations--heading {
+        inset-inline-end: 15px;
+        text-align: end
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+        right: auto
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+        right: 0
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+        left: 0
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:after {
+        inset-inline-start: auto;
+        inset-inline-end: 0
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+        right: auto
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+        right: 3px
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+        left: 3px
+    }
+
+    .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .banner-image--annotations li.annotations--bottom:before {
+        inset-inline-start: auto;
+        inset-inline-end: 3px
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner.banner--left {
+    background-color: #fff;
+    background-color: var(--tds-color--white)
+}
+
+@media (max-width:1025px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner.banner--left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image {
+    left: auto
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image {
+    right: auto
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image {
+    inset-inline-start: auto;
+    max-height: none;
+    min-height: auto;
+    position: relative;
+    top: auto;
+    -webkit-transform: none;
+    transform: none
+}
+
+@media (max-width:639px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image {
+        height: calc(100vw + 150px)
+    }
+}
+
+@media (max-width:839px) and (orientation:landscape) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image {
+        height: 100vh
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%
+}
+
+@media (max-width:839px) and (orientation:landscape) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations {
+        display: none
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li {
+    float: left
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li {
+    float: right
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li {
+    float: inline-start;
+    line-height: 15px;
+    padding-bottom: 0;
+    position: absolute
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li {
+        line-height: inherit;
+        width: 100%
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+    left: -.5px
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+    right: -.5px
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+    background-color: #fff;
+    background-color: var(--tds-color--white);
+    content: "";
+    display: block;
+    height: 20vw;
+    inset-inline-start: -.5px;
+    position: absolute;
+    top: -20vw;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: all 1s cubic-bezier(.23, 1, .32, 1);
+    transition: all 1s cubic-bezier(.23, 1, .32, 1);
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s;
+    width: 3px
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+        left: 0
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+        right: 0
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+        height: 30vw;
+        inset-inline-start: 0;
+        top: -30vw;
+        -webkit-transition: -webkit-transform 1s cubic-bezier(.23, 1, .32, 1);
+        transition: -webkit-transform 1s cubic-bezier(.23, 1, .32, 1);
+        transition: transform 1s cubic-bezier(.23, 1, .32, 1);
+        transition: transform 1s cubic-bezier(.23, 1, .32, 1), -webkit-transform 1s cubic-bezier(.23, 1, .32, 1);
+        -webkit-transition-delay: .1s;
+        transition-delay: .1s;
+        width: 2px
+    }
+}
+
+@media (min-width:1024px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+        height: 17vw;
+        top: -17vw
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:before {
+        height: 22vw;
+        top: -22vw
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:after {
+    left: -3.5px
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:after {
+    right: -3.5px
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:after {
+    background-color: #000;
+    background-color: var(--tds-color--black);
+    border: 2px solid #fff;
+    border: 2px solid var(--tds-color--white);
+    border-radius: 8px;
+    -webkit-box-sizing: initial;
+    box-sizing: initial;
+    content: "";
+    display: block;
+    height: 5px;
+    inset-inline-start: -3.5px;
+    position: absolute;
+    top: -3.5px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform .5s cubic-bezier(.23, 1, .32, 1);
+    transition: -webkit-transform .5s cubic-bezier(.23, 1, .32, 1);
+    transition: transform .5s cubic-bezier(.23, 1, .32, 1);
+    transition: transform .5s cubic-bezier(.23, 1, .32, 1), -webkit-transform .5s cubic-bezier(.23, 1, .32, 1);
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s;
+    width: 5px
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:after {
+        left: -2px
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:after {
+        right: -2px
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li:after {
+        border: 1px solid #fff;
+        border: 1px solid var(--tds-color--white);
+        height: 4px;
+        inset-inline-start: -2px;
+        top: -2px;
+        width: 4px
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+    right: calc(100% + 10px)
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+    left: calc(100% + 10px)
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+    left: auto
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+    right: auto
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+    text-align: right
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+    text-align: left
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+    color: #fff;
+    color: var(--tds-color--white);
+    font-size: 1.1vw;
+    inset-inline-end: calc(100% + 10px);
+    inset-inline-start: auto;
+    line-height: inherit;
+    margin: 0;
+    min-width: 500px;
+    opacity: 1;
+    padding-top: 0;
+    position: relative;
+    text-align: end;
+    top: -20vw;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 1s cubic-bezier(.23, 1, .32, 1);
+    transition: all 1s cubic-bezier(.23, 1, .32, 1);
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+
+@media (min-width:1230px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        font-size: 14px
+    }
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        right: calc(100% + 5px)
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        left: calc(100% + 5px)
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        right: auto
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        margin-left: 0
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        margin-right: 0
+    }
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        text-align: right
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        text-align: left
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        font-size: 10px;
+        inset-inline-end: calc(100% + 5px);
+        inset-inline-start: auto;
+        line-height: normal;
+        -webkit-margin-start: 0;
+        margin-inline-start: 0;
+        min-width: auto;
+        padding-top: 0;
+        text-align: end;
+        top: -30vw;
+        width: auto
+    }
+}
+
+@media (min-width:1024px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        top: -17vw
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li .annotations--heading {
+        top: -22vw
+    }
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations .annotations--front .annotations--heading {
+        right: calc(36vw + 5px)
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations .annotations--front .annotations--heading {
+        left: calc(36vw + 5px)
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations .annotations--front .annotations--heading {
+        inset-inline-end: calc(36vw + 5px);
+        overflow-wrap: break-word;
+        width: calc(36vw - 10px);
+        word-wrap: break-word
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.cmp-animate--to_reveal:after,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.cmp-animate--to_reveal:before {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0)
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.cmp-animate--to_reveal .annotations--heading {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px)
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.cmp-animate--to_reveal.cmp-animate--revealed:after,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.cmp-animate--to_reveal.cmp-animate--revealed:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.cmp-animate--to_reveal.cmp-animate--revealed .annotations--heading {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+    left: 26vw
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+    right: 26vw
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+    inset-inline-start: 26vw;
+    top: 50%
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        left: 42.5vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        right: 42.5vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        inset-inline-start: 42.5vw;
+        margin-top: -4vw;
+        top: 50%
+    }
+}
+
+@media (min-width:1024px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        left: 34vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        right: 34vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        inset-inline-start: 34vw;
+        top: 50%
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        left: 26vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        right: 26vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front {
+        inset-inline-start: 26vw
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+    left: 49vw
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+    right: 49vw
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+    inset-inline-start: 49vw;
+    margin-top: -17vw;
+    top: 50%
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        left: 74vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        right: 74vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        inset-inline-start: 74vw;
+        margin-top: -30vw;
+        top: 50%
+    }
+}
+
+@media (min-width:1024px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        left: 54vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        right: 54vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        inset-inline-start: 54vw;
+        margin-top: -14vw;
+        top: 50%
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        left: 49vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        right: 49vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        inset-inline-start: 49vw;
+        margin-top: -17vw
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top .annotations--heading {
+    top: -13.5vw
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top .annotations--heading {
+        top: -20vw;
+        -webkit-transition-delay: .3s;
+        transition-delay: .3s
+    }
+}
+
+@media (min-width:1024px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top .annotations--heading {
+        top: -8vw;
+        -webkit-transition-delay: .3s;
+        transition-delay: .3s
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top .annotations--heading {
+        top: -13.5vw
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top:before {
+    height: 13.5vw;
+    top: -13.5vw;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top:before {
+        height: 20vw;
+        top: -20vw;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s
+    }
+}
+
+@media (min-width:1024px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top:before {
+        height: 8vw;
+        top: -8vw
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top:before {
+        height: 13.5vw;
+        top: -13.5vw
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+    left: 54vw
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+    right: 54vw
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+    inset-inline-start: 54vw;
+    margin-top: 9vw;
+    top: 50%
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+        left: 77vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+        right: 77vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+        inset-inline-start: 77vw;
+        margin-top: 14vw;
+        top: 57%
+    }
+}
+
+@media (min-width:1024px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+        left: 58vw
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+        right: 58vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom {
+        inset-inline-start: 58vw;
+        margin-top: 7vw;
+        top: 50%
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading {
+    margin-top: -10px;
+    top: 10.5vw;
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading {
+        left: auto
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading {
+        right: auto
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading {
+        inset-inline-start: auto;
+        margin-top: -10px;
+        top: 21vw;
+        -webkit-transition-delay: .5s;
+        transition-delay: .5s
+    }
+}
+
+@media (max-width:375px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading {
+        top: 27vw
+    }
+}
+
+@media (min-width:1024px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading {
+        margin-top: -15px;
+        top: 9vw
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom:before {
+    height: 10.5vw;
+    top: 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+
+@media (max-width:639px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom:before {
+        height: 21vw;
+        top: 0;
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transition-delay: .2s;
+        transition-delay: .2s
+    }
+}
+
+@media (max-width:375px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom:before {
+        height: 27vw
+    }
+}
+
+@media (min-width:1024px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom:before {
+        height: 9vw;
+        top: 0
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom,
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front,
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+    left: 0
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom,
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front,
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+    right: 0
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+    height: 0;
+    inset-inline-start: 0;
+    margin-top: 0;
+    top: auto
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front .annotations--heading,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top .annotations--heading {
+    margin-top: 0;
+    top: -8vw
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom:before,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front:before,
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top:before {
+    height: 8vw;
+    top: -8vw;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%
+}
+
+@media (max-width:639px) and (orientation:portrait),
+only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom,
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front,
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        left: 0
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom,
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front,
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        right: 0
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom,
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front,
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top {
+        bottom: 0;
+        height: 0;
+        inset-inline-start: 0;
+        top: auto
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom .annotations--heading,
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front .annotations--heading,
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top .annotations--heading {
+        top: -20vw
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--bottom:before,
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--front:before,
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .banner-image--annotations li.annotations--top:before {
+        height: 20vw;
+        top: -20vw
+    }
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .hero-picture {
+    position: relative;
+    -webkit-transform: none !important;
+    transform: none !important
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .hero-picture .tcl-image {
+    top: auto;
+    bottom: 0;
+    inset-block: auto 0;
+    left: 0;
+    right: 0;
+    inset-inline: 0;
+    position: absolute
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .hero-picture img {
+    height: auto;
+    width: 100%
+}
+
+@media (min-width:1024px) and (max-width:1475px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .hero-picture img {
+        height: 100vh;
+        max-height: 100%;
+        font-family: "object-fit:cover";
+        -o-object-fit: cover;
+        object-fit: cover
+    }
+}
+
+@media (max-width:839px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .hero-picture img {
+        height: 100%
+    }
+}
+
+@media (max-width:768px) {
+    .hero.hero--with-banner.hero-annotations.hero-annotations--solar-panels .banner .banner-image .hero-picture .tcl-image {
+        height: 100%
+    }
+}
+
+@media (min-width:1600px) {
+    html[dir=rtl] .hero.hero--with-banner.hero-annotations:not(.hero-annotations--solar-panels) .asset-wrapper {
+        -webkit-transform: translateX(50%) !important;
+        transform: translateX(50%) !important
+    }
+}
+
+.hero.hero--with-banner.hero-annotations {
+    overflow: hidden
+}
+
+@media (max-width:839px) and (orientation:landscape) {
+    .hero.hero--with-banner.hero-annotations {
+        min-height: -webkit-fit-content;
+        min-height: -moz-fit-content;
+        min-height: fit-content
+    }
+}
+
+.hero.hero--with-banner.hero-annotations .banner.banner--left {
+    background-color: #f4f4f4;
+    background-color: var(--tds-color--grey70);
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+@media (min-width:1024px) {
+    .hero.hero--with-banner.hero-annotations .banner.banner--left {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+        height: 100%;
+        min-width: 415px;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+        padding: 0 50px;
+        width: 415px
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content .banner-copy {
+        -webkit-margin-after: 16px;
+        margin-bottom: 16px
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content header {
+        -webkit-margin-before: 34px;
+        margin-top: 34px
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 16px 0 0
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item .banner-buttons:not(.banner-buttons--preferred) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        height: 100%
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .banner-buttons {
+        bottom: 50px;
+        position: absolute;
+        z-index: 3
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item:first-of-type {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        width: 100%
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item:first-of-type .banner-buttons {
+        display: none
+    }
+
+    @media only screen and (min-device-width:834px) and (max-device-width:1366px) {
+        .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .banner-buttons {
+            bottom: 64px
+        }
+
+        .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item {
+            -webkit-padding-after: 64px;
+            padding-bottom: 64px
+        }
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-component {
+        display: block
+    }
+
+    @media (max-height:719px),
+    only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+        .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-component {
+            display: none
+        }
+    }
+}
+
+@media only screen and (min-device-width:1024px) and (max-device-width:1024px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations .banner.banner--left.banner--left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap
+    }
+}
+
+@media (max-width:1023px) {
+    .hero.hero--with-banner.hero-annotations .banner.banner--left {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-component {
+        display: none
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        height: auto;
+        min-width: none;
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0;
+        padding: 0 50px 50px;
+        width: 100%;
+        z-index: 2
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item .banner-buttons:not(.banner-buttons--preferred) {
+        display: none
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .banner-buttons {
+        position: static
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item:first-of-type {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        width: 40%
+    }
+
+    .hero.hero--with-banner.hero-annotations .banner.banner--left .banner-content>.tds-flex .tds-flex-item:first-of-type .banner-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+}
+
+.hero.hero--with-banner.hero-annotations .banner.banner--left .tds-o-content_container {
+    width: auto
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations .banner-content {
+    left: 0
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations .banner-content {
+    right: 0
+}
+
+.hero.hero--with-banner.hero-annotations .banner-content {
+    background-color: #fff;
+    background-color: var(--tds-color--white);
+    inset-inline-start: 0;
+    margin: 0;
+    position: relative;
+    top: 0
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--model-3 .banner-image .asset-wrapper img {
+    width: 100%;
+    height: auto
+}
+
+@media (min-width:640px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-3 .banner-image .asset-wrapper img {
+        left: -13%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-3 .banner-image .asset-wrapper img {
+        right: -13%
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--model-3 .banner-image .asset-wrapper img {
+        inset-inline-start: -13%;
+        position: relative
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front h4,
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top h4 {
+    left: 15px
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front h4,
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top h4 {
+    right: 15px
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front h4,
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top h4 {
+    right: auto
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front h4,
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top h4 {
+    left: auto
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front h4,
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top h4 {
+    text-align: right
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front h4,
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top h4 {
+    text-align: left
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front h4,
+.hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top h4 {
+    inset-inline-start: 15px;
+    inset-inline-end: auto;
+    text-align: end
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front {
+    left: 2%
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front {
+    right: 2%
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front {
+    height: 36%;
+    inset-inline-start: 2%;
+    max-width: 25%;
+    top: 16%
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front {
+        left: 6%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front {
+        right: 6%
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--front {
+        inset-inline-start: 6%;
+        max-width: 35%;
+        top: 18%
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top {
+    left: 28%
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top {
+    right: 28%
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top {
+    height: 20%;
+    inset-inline-start: 28%;
+    max-width: 19%;
+    top: 25px
+}
+
+@media (max-width:639px) {
+    [dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top {
+        left: 47%
+    }
+
+    [dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top {
+        right: 47%
+    }
+
+    .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--top {
+        inset-inline-start: 47%;
+        max-width: 35%
+    }
+}
+
+[dir=ltr] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--bottom {
+    left: 48%
+}
+
+[dir=rtl] .hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--bottom {
+    right: 48%
+}
+
+.hero.hero--with-banner.hero-annotations.hero-annotations--model-x .banner-image .banner-image--annotations li li.annotations--bottom {
+    height: 25%;
+    inset-inline-start: 48%;
+    top: 61%
+}
+
+.tcl-ratings-simple {
+    background-color: #eee;
+    background-color: var(--tds-color--grey60);
+    border-radius: 24px;
+    border-radius: var(--tds-size--3x);
+    max-width: 320px;
+    padding: 24px;
+    padding: var(--tds-size--3x)
+}
+
+.tcl-ratings-simple__header {
+    -webkit-padding-after: 16px;
+    -webkit-padding-after: var(--tds-size--2x);
+    padding-bottom: 16px;
+    padding-bottom: var(--tds-size--2x);
+    -webkit-padding-before: 0;
+    padding-top: 0;
+    text-align: center
+}
+
+@media only screen and (min-device-width:834px) and (max-device-width:1366px) and (orientation:landscape) {
+    .tcl-ratings-simple .tcl-card__header {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap
+    }
+}
+
+@media only screen and (min-device-width:834px) and (max-device-width:1366px) and (orientation:landscape) {
+    [dir=ltr] .tcl-ratings-simple .tcl-card__microcopy {
+        padding-left: 4px;
+        padding-left: var(--tds-size--half)
+    }
+
+    [dir=rtl] .tcl-ratings-simple .tcl-card__microcopy {
+        padding-right: 4px;
+        padding-right: var(--tds-size--half)
+    }
+
+    .tcl-ratings-simple .tcl-card__microcopy {
+        -webkit-margin-after: 5px;
+        margin-bottom: 5px;
+        -webkit-padding-start: 4px;
+        -webkit-padding-start: var(--tds-size--half);
+        padding-inline-start: 4px;
+        padding-inline-start: var(--tds-size--half)
+    }
+}
+
+.tcl-ratings-complex {
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 auto
+}
+
+@media (min-width:840px) {
+    .tcl-ratings-complex {
+        width: 840px
+    }
+}
+
+@media (max-width:839px) {
+    .tcl-ratings-complex {
+        height: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        width: 420px
+    }
+}
+
+@media (max-width:419px) {
+    .tcl-ratings-complex {
+        height: auto;
+        width: 100%
+    }
+}
+
+.tcl-ratings-complex__copy {
+    max-width: 320px
+}
+
+@media (max-width:839px) {
+    .tcl-ratings-complex__copy {
+        max-width: none;
+        -webkit-padding-after: 32px;
+        -webkit-padding-after: var(--tds-size--4x);
+        padding-bottom: 32px;
+        padding-bottom: var(--tds-size--4x)
+    }
+}
+
+.tcl-ratings-complex__header {
+    -webkit-padding-after: 16px;
+    -webkit-padding-after: var(--tds-size--2x);
+    padding-bottom: 16px;
+    padding-bottom: var(--tds-size--2x);
+    -webkit-padding-before: 0;
+    padding-top: 0
+}
+
+.tcl-ratings-complex__badge_and_categories {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap
+}
+
+@media (max-width:839px) {
+    .tcl-ratings-complex__badge_and_categories {
+        width: 100%
+    }
+}
+
+@media (max-width:419px) {
+    [dir=ltr] .tcl-ratings-complex__badge_and_categories {
+        margin-left: -12.5%
+    }
+
+    [dir=rtl] .tcl-ratings-complex__badge_and_categories {
+        margin-right: -12.5%
+    }
+
+    .tcl-ratings-complex__badge_and_categories {
+        width: 125%;
+        -webkit-margin-start: -12.5%;
+        margin-inline-start: -12.5%;
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+}
+
+[dir=ltr] .tcl-ratings-complex__badge {
+    margin-right: 24px;
+    margin-right: var(--tds-size--3x)
+}
+
+[dir=ltr] .tcl-ratings-complex__badge,
+[dir=rtl] .tcl-ratings-complex__badge {
+    margin-left: 24px;
+    margin-left: var(--tds-size--3x)
+}
+
+[dir=rtl] .tcl-ratings-complex__badge {
+    margin-right: 24px;
+    margin-right: var(--tds-size--3x)
+}
+
+[dir=ltr] .tcl-ratings-complex__badge {
+    text-align: left
+}
+
+[dir=rtl] .tcl-ratings-complex__badge {
+    text-align: right
+}
+
+.tcl-ratings-complex__badge {
+    border: 3px solid #000;
+    border: 3px solid var(--tds-color--black);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+    -webkit-margin-end: 24px;
+    -webkit-margin-end: var(--tds-size--3x);
+    margin-inline-end: 24px;
+    margin-inline-end: var(--tds-size--3x);
+    -webkit-margin-start: 24px;
+    -webkit-margin-start: var(--tds-size--3x);
+    margin-inline-start: 24px;
+    margin-inline-start: var(--tds-size--3x);
+    min-height: 216px;
+    padding: 16px;
+    padding: var(--tds-size--2x);
+    text-align: start
+}
+
+@media (max-width:839px) {
+    [dir=ltr] .tcl-ratings-complex__badge {
+        margin-left: 0
+    }
+
+    [dir=rtl] .tcl-ratings-complex__badge {
+        margin-right: 0
+    }
+
+    .tcl-ratings-complex__badge {
+        -webkit-margin-start: 0;
+        margin-inline-start: 0
+    }
+}
+
+.tcl-ratings-complex__badge-header {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    font-size: 56px;
+    font-size: var(--tds-size--7x);
+    line-height: 1;
+    padding: 0
+}
+
+.tcl-ratings-complex__glyph {
+    padding: 0
+}
+
+.tcl-ratings-complex__badge--center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.tcl-ratings-complex__badge--center .tcl-ratings-complex__microcopy {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.tcl-ratings-complex__microcopy {
+    padding: 0
+}
+
+.tcl-ratings-complex .tcl-card {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    min-width: 50%
+}
+
+.tcl-card__ordered_list {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.tcl-card__list-item {
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-margin-after: 0;
+    margin-bottom: 0;
+    -webkit-padding-after: 8px;
+    -webkit-padding-after: var(--tds-size--1x);
+    padding-bottom: 8px;
+    padding-bottom: var(--tds-size--1x)
+}
+
+[dir=ltr] .tcl-card__header {
+    margin-right: 8px;
+    margin-right: var(--tds-size--1x)
+}
+
+[dir=rtl] .tcl-card__header {
+    margin-left: 8px;
+    margin-left: var(--tds-size--1x)
+}
+
+.tcl-card__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-margin-after: 0;
+    margin-bottom: 0;
+    -webkit-margin-end: 8px;
+    -webkit-margin-end: var(--tds-size--1x);
+    margin-inline-end: 8px;
+    margin-inline-end: var(--tds-size--1x)
+}
+
+.tcl-card__microcopy {
+    font-family: Gotham Book, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    font-family: var(--tds-font-combined);
+    font-size: 8px;
+    font-size: var(--tds-size--1x);
+    line-height: 1
+}
+
+.tcl-card__glyphs {
+    -webkit-padding-before: 0;
+    padding-top: 0;
+    white-space: nowrap
+}
