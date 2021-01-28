@@ -1,0 +1,31 @@
+body,html{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.navbar{
+  border: 1px black solid;
+}
+.navbar, .navbar a{
+  list-style: none;
+  font-size: 40px;
+  text-decoration: none;
+  overflow: auto;
+  color: black;
+  padding: 20px;
+  display: block;
+
+}
+.navbar a:hover{
+
+}
+.navbar .logo{
+  
+  float: left;
+  padding: 20px;
+}
+.navbar .item{
+  float: right;
+  padding: 20px;
+
+}

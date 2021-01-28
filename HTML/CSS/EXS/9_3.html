@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.3</title>
+  <style>
+    .box{
+      border: 2px #333 solid;
+      width: 100px;
+      height: 100px;
+      
+    }
+    #box-1{
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background: green;
+      z-index: 1;
+      
+    }
+    #box-2{
+      position: absolute;
+      top: 90px;
+      left: 110px;
+      background: blue;
+      z-index: 2;
+      height: 150px;
+      
+    }
+    #box-3{
+      position: absolute;
+      top: 200px;
+      left: 50px;
+      background: grey;
+      width: 500px;
+      z-index: 3;
+      
+    }
+    #box-4{
+      background: purple;
+      position: absolute;
+      top: 10px;
+      left: 250px;
+      height: 300px;
+      z-index: 4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="box-1">div one</div>
+  <div class="box" id="box-2">div Tow</div>
+  <div class="box" id="box-3">div Three</div>
+  <div class="box" id="box-4">div four</div>
+  
+</body>
+</html>

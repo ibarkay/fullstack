@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floaft and align</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4em;
+    }
+
+    .box{
+      background: lightgray;
+      border: 1px solid #333;
+      padding: 20px;
+      margin: 10px;
+    }
+    .container {
+      max-width: 960px;
+      margin:  30px auto;
+
+    }
+    .clr{
+      clear: both;
+    }
+
+    .box p{
+      text-align: center;
+    }
+    #box-2 {
+      float: left;
+      width: 60%;
+    }
+    #box-3{
+      float: right;
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="box-1" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in veniam adipisci aliquid natus inventore dolor nulla magnam possimus numquam.</p>
+    </div>
+    <div id="box-2" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in veniam adipisci aliquid natus inventore dolor nulla magnam possimus numquam.</p>
+    </div>
+    <div id="box-3" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in veniam adipisci aliquid natus inventore dolor nulla magnam possimus numquam.</p>
+    </div>
+    
+    <div id="box-4" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in veniam adipisci aliquid natus inventore dolor nulla magnam possimus numquam.</p>
+    </div>
+  </div>
+</body>
+</html>

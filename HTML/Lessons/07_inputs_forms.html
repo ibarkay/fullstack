@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input & forms</title>
+</head>
+<body>
+  <form action="process.php">
+  <div>
+    <label for="name">Name</label><br>
+    <!-- text input -->
+    <input type="text" id="name" name="name" >
+  </div>
+  <div>
+    <label for="email">Email</label><br>
+    <!-- email input -->
+    <input type="email" name="email" id="email" placeholder="enter an email">
+  </div>
+  <div>
+    <!-- textarea input -->
+    <label for="message">Message</label><br>
+    <textarea name="message" id="message" cols="50" rows="5"></textarea>
+  </div>
+  <div>
+    <label for="sex">Sex</label>
+    <!-- select -->
+    <select name="sex" id="sex">
+      <option value="male">Male</option>
+      <option value="female" selected>Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div>
+    <!-- number -->
+    <label for="age">Age</label><br>
+    <input type="number" name="age" id="age">
+  </div>
+  <div>
+    <!-- date -->
+    <label for="birthdate">Birethdate</label><br>
+    <input type="date" name="birthdate" id="birthdate">
+  </div>
+  <div>
+    <label for="membership">Membership</label>
+    <!-- radio -->
+    <input type="radio" name="membership" value="simple" id="membership">simple
+    <input type="radio" name="membership" value="standard" id="membership" checked>Standard
+    <input type="radio" name="membership" value="super" id="membership">Super
+  </div>
+  <div>
+    <label for="membership">I Like..</label>
+    <!-- checkbox -->
+    <input type="checkbox" name="likes" value="bike" id="likes">Bike
+    <input type="checkbox" name="likes" value="car" id="likes" >Car
+    <input type="checkbox" name="likes" value="plain" id="likes">Plain
+  </div>
+  <div>
+    <!-- submit -->
+    <input type="submit" value="Submit">
+    <!-- using button tag -->
+    <!-- <button type="submit">Submit</button> -->
+    <button type="reset">Reset</button>
+  </div>
+  </form>
+</body>
+</html>
