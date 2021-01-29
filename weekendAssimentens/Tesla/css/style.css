@@ -55,7 +55,6 @@ body,html{
 
 /* main-page */
 .main-page{
- 
   text-align: center;
   height: 100vh;
   box-sizing: border-box;
@@ -232,3 +231,36 @@ body,html{
     border-left: 1px solid #fff;
     
     }
+.left-side-bar .list{
+  list-style: none;
+}
+.left-side-bar .list .item{
+  font-family: Gotham1;
+  /* border: 5px solid transparent; */
+  text-align: left;
+  font-size: 14px;
+  inline-size: 100px;
+  padding: 3px;
+  margin: 0;
+  font-weight: 300;
+}
+.left-side-bar .list .item-text{
+  padding: 3px;
+  opacity: 0.0;
+}
+.left-side-bar .list .item-text:hover{
+  
+  opacity: 1;
+  cursor: pointer;
+}
+.left-side-bar .list .item .side_nav-tab{
+      background-color: #fff;
+      height: 23px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-block: 0px 0;
+      margin-inline: -5px;
+      position: absolute;
+      
+      width: 1px;
+}
