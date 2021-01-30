@@ -22,6 +22,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Gotham4";
+  src: url(../fonts/Gotham\ Light\ Regular.otf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 
 
 a{
@@ -36,7 +42,7 @@ a{
   
 }
 body,html{
-    height: 1000px;
+    /* height: 1000px; */
     margin: 0;
     /* min-height: 100 vh; */
     padding: 0;
@@ -71,6 +77,7 @@ body,html{
   background-size: cover;
 }
 .main-nav {
+  display: none;
   text-align: center;
   /* border: 2px solid black; */
   position: absolute;
@@ -239,7 +246,7 @@ body,html{
   /* border: 5px solid transparent; */
   text-align: left;
   font-size: 14px;
-  inline-size: 100px;
+  inline-size: 300x;
   padding: 3px;
   margin: 0;
   font-weight: 300;
@@ -255,6 +262,212 @@ body,html{
 }
 .left-side-bar .list .item .side_nav-tab{
       background-color: #fff;
+      height: 23px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-block: 0px 0;
+      margin-inline: -5px;
+      position: absolute;
+      
+      width: 1px;
+}
+
+
+/* page 2 */
+.main-page2{
+  height: 100vh;
+  
+}
+.banner-img{
+  /* background-image: url("../img/safety.png") ; */
+  margin: 0;
+  position: relative;
+  /* display: flex; */
+  /* z-index: 2; */
+  padding: 0;
+  height: 100vh;
+  width: 65%;
+  float: right;
+  /* height: 323px; */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.banner-img .bg2{
+  background-image: url("../img/safety.png");
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  /* float: left; */
+  margin: 0;
+  padding: 0;
+  background-position: right ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2 ul{
+  list-style: none;
+}
+.bg2 li{
+  color: #333;
+  display: block;
+  /* position: absolute; */
+  left: 15px;
+  line-height: 15px;
+  /* border: #333 solid 1px; */
+  text-size-adjust:100%;
+  text-align: left;
+  inset-inline-start: 15px;
+  width: 30px;
+}
+.bg2 .img-specs .impact{
+  position: absolute;
+  left: 30%;
+  top: 26%;
+}
+.bg2 .img-specs .line{
+  display: block;
+  
+  width: 3px;
+  background-color: black;
+  height: 100px;
+}
+.bg2 .img-specs .line .y{
+  width: 100px;
+}
+.bg2 .img-specs .struct{
+  position: absolute;
+  left: 45%;
+  top: 17%;
+}
+.bg2 .img-specs .risk{
+  position: absolute;
+  left: 55%;
+  top: 76%;
+  width: 200px;
+}
+
+.main-page2 .banner-text{
+  
+  /* float: left; */
+  position: absolute;
+  /* border: 3px #333 solid; */
+  width: 35%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.text-area {
+  margin-top: 50px;
+  width: 80%;
+  height: 70%;
+  /* border: #333 solid 3px; */
+  color: #333;
+  text-align: left;
+}
+.text-area .btns-con{
+  position: absolute;
+  /* left: 35%; */
+  /* border: #333 1px solid; */
+  width: 80%;
+  /* height: 150px; */
+  text-align: left;
+  margin-top: 15%;
+  
+}
+.text-area a{
+  display: inline-block;
+  /* position: relative; */
+  /* float: left; */
+  /* display: inline-block; */
+  font-size: 14px;
+  /* inline-size: 160px; */
+  line-height: 14.5px;
+  max-inline-size: 400px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  text-decoration-color: #333;
+  text-decoration-style: solid;
+  text-size-adjust: 100%;
+  border: #333 3px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: initial;
+  color: #333;
+  margin-right: 5px;
+  
+}
+.text-area  .icon{
+  
+  block-size: 40px;
+  padding: 10px;
+  font-size: 18px;
+  
+
+}
+.text-area .txt{
+  display: inline-block;
+  margin-right: 3%;
+  margin-left: 3%;
+  font-family: Gotham1;
+  font-size: 14px;
+}
+.text-area a:hover{
+  color: #fff;
+  background-color: #333;
+}
+.text-area h2{
+  font-family: Gotham4 ;
+  font-size: 17px;
+  padding: 0;
+  margin: 0;
+}
+.text-area h1{
+  padding: 0;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  margin: 0;
+  font-family: Gotham2 ;
+}
+.text-area p{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  padding-top: 70px;
+  font-family: Gotham1 ;
+}
+.left-side-bar2 .list{
+  list-style: none;
+}
+.left-side-bar2 .list .item{
+  font-family: Gotham1;
+  /* border: 5px solid transparent; */
+  text-align: left;
+  font-size: 14px;
+  inline-size: 300x;
+  padding: 3px;
+  margin: 0;
+  font-weight: 300;
+}
+.left-side-bar2 .list .item-text{
+  padding: 3px;
+  opacity: 0.0;
+}
+.left-side-bar2 .list .item-text:hover{
+  
+  opacity: 1;
+  cursor: pointer;
+}
+.left-side-bar2 .list .item .side_nav-tab{
+      background-color: #333;
       height: 23px;
       margin-top: 0;
       margin-bottom: 0;
