@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12.3</title>
+  <style>
+    .side {
+      border: 1px solid #333;
+      float: left;
+    }
+    @media (max-width: 600px) {
+      .side {
+        display: none;
+      }
+      .main {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="side">
+    <h1>this is a side</h1>
+    <p>floating...wiil disapear in samll screens</p>
+  </div>
+  <div class="main">
+    <h1>this is the main</h1>
+    <p>that will grow in samll screens</p>
+  </div>
+</body>
+</html>

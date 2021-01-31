@@ -326,14 +326,13 @@ body,html{
   left: 30%;
   top: 26%;
 }
-.bg2 .img-specs .line{
+.bg2 .img-specs .line {
   display: block;
-  
   width: 3px;
   background-color: black;
   height: 100px;
 }
-.bg2 .img-specs .line .y{
+.bg2 .img-specs .line .ond{
   width: 100px;
 }
 .bg2 .img-specs .struct{
@@ -345,7 +344,7 @@ body,html{
   position: absolute;
   left: 55%;
   top: 76%;
-  width: 200px;
+  /* width: 200px; */
 }
 
 .main-page2 .banner-text{
