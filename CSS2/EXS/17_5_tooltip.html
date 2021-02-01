@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17.5 tooltip</title>
+  <style>
+    .tooltip a{
+      text-decoration: none;
+    }
+    .tooltip a:after{
+      content: attr(data);
+      visibility: hidden;
+      position: absolute;
+      top: 30px;
+      width: 120px;
+      background-color: yellow;
+      color: plum;
+      font-size: 10px;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1
+    }
+    .tooltip a:hover::after{
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  
+
+<div class="tooltip" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, consequuntur.<a data="this is working" href="#">click here!</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam at asperiores aliquam esse optio voluptate ab placeat odit sit iusto provident unde error, in autem consequuntur, nemo enim, soluta temporibus.</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17.4</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0%;
+      padding: 0;
+      background: black;
+      color: white;
+    }
+      .box {
+
+          text-align: center;
+          font-size: 40px;
+          padding: 1.7em;
+          position: relative;
+          width: 300px;
+          height: 300px;
+          margin: 3em auto;
+          border: solid 2px #d00;
+      }
+      /* drewing black box's over border red box */
+      .box::before, .box::after { 
+          position: absolute;
+          background: inherit;
+          content: '';
+          z-index: 0;
+      }
+      .box::before {
+          width: 100px;
+          left: calc(50% - 50px);
+          height: calc(100% + 4px);
+          top: -2px;
+      }
+      .box::after {
+          height: 100px;
+          left: -2px;
+          width: calc(100% + 4px);
+          top: calc(50% - 50px);
+      }
+      .box::after {
+          content: 'Some Text';
+          
+      }
+      
+  </style>
+</head>
+<body>
+  
+    <div class="box">Some Text</div>
+
+  </div>
+</body>
+</html>

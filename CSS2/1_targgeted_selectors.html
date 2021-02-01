@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>targgeted selected</title>
+  <style>
+    /* Direct chiald */
+    div > p{
+      background: #ddd;
+    }
+    /* Dirctly after */
+    div + p {
+      background: #333;
+      color: white;
+    }
+    /* By attribute */
+    a[target] {
+      background: red;
+      color: white;
+    }
+    /* speciphic attr valuves */
+    input[type='text'],
+    input[type='email']{
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    
+  </style>
+
+
+</head>
+<body>
+  <div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <ul>
+      <li>item 1</li>
+      <li><p>item 2</p></li>
+      <li>item 3</li>
+    </ul>
+    <p>
+      Lorem ipsum dolor sit amet.
+    </p>
+  </div>
+
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+
+  <a href="#">Page 1</a>
+  <a href="http://google.com" target="_blank">google</a>
+
+  <form >
+    <input type="text" placeholder="text">
+    <input type="email" placeholder="email">
+    <input type="submit" value="Submit">
+    
+</form>
+</body>
+</html>
