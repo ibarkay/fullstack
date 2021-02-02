@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-color: rgb(190, 5, 5);
+      --bg-color2 : yellow;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .box {
+      position: relative;
+      background-color: var(--bg-color);
+      width: 200px;
+      height: 200px;
+      
+
+    }
+    .box::after {
+      content: '';
+      background-color: black;
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      /* z-index: -1; */
+      
+      /* left: 200px; */
+    }
+    .box:hover::after {
+      left: 200px;
+      animation: animate1 5s forwards ease-in-out;
+    }
+    @keyframes animate1 {
+      from {
+        left: 0;
+      }
+      to {
+        left: 200px;
+      }
+    }
+  </style>
+  <title>19.2</title>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

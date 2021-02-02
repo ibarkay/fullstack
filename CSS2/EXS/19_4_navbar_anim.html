@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19_4 navbar aminated</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .flex-con {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #f4f4f4;
+      height: 100px;
+      width: 100vw;
+      
+    }
+    .flex-con > div {
+      /* background: red; */
+      padding: 3px;
+      overflow: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      
+      position: relative;
+      
+    }
+    a::before {
+      display: flex;
+      position: absolute;
+      transform: translateX(-110%);
+      content: '';
+      background: #333;
+      width: 100%;
+      height: 2px;
+      transition: all 1s ease-in-out;
+    }
+    a:after {
+      display: flex;
+      content: '';
+      background: #333;
+      width: 100%;
+      height: 2px;
+      transform: translateX(+110%);
+      transition: all 1s ease-in-out;
+    }
+    a:hover::after , a:hover::before{
+      transform: translateX(0);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="flex-con">
+    
+      <div class="home"><a href="#">home</a></div>
+      <div class="about"><a href="#">about</a></div>
+      <div class="service"><a href="#">service</a></div>
+      <div class="profodivo"><a href="#">profodivo</a></div>
+      <div class="pcontact"><a href="#">contact</a></div>
+   
+  </div>
+</body>
+</html>

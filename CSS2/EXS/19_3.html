@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19.3</title>
+  <style>
+    .flex-con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .box {
+      display: flex;
+      position: relative;
+      border: 2px solid #333;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      
+    }
+    .box.box.rotate{
+      background: transparent;
+      z-index: 1;
+    }
+    .box.rotate:after {
+      display: flex;
+      content: '';
+      position: absolute;
+      background: yellow;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-200px);
+      /* rotate: 10deg; */
+      /* z-index: 1; */
+      transition: all 1s ease-in-out; 
+      
+    }
+    .box.rotate:hover::after{
+      /* transform: translatey(0px); */
+      transform: rotate(180deg);
+
+      
+    }
+    .box.scale-op::after {
+      display: flex;
+      content: 'scale-op';
+      position: absolute;
+      color: #fff;
+      background: black;
+      overflow: hidden;
+      font-size: 30px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 1s ease-in-out;
+
+    }
+    .box.scale-op:hover::after{
+      opacity: 1;
+      font-size: 1rem;
+    }
+    .box.translate:after{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      overflow: hidden;
+      content: 'translate';
+      position: absolute;
+      background: #333;
+      color: #fff;
+      width: 0%;
+      height: 100%;
+      transition: all 1s ease-in-out;
+    }
+    .box.translate:hover::after {
+      width: 100%;
+    }
+
+    .box.translate-y:after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      content: 'YEAH!';
+      text-align: center;
+      background: red;
+      position: absolute;
+      /* remember over-flow */
+      overflow: hidden;
+      width: 100%;
+      height: 0px;
+      transition: all 1s ease-in-out;
+    }
+    .box.translate-y:hover::after {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-con">
+    <div class="box rotate">rotate</div>
+    <div class="box translate">translate</div>
+    <div class="box translate-y">translate-y</div>
+    <div class="box scale-op">scale-op</div>
+  </div>
+</body>
+</html>

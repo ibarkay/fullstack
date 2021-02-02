@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Spinners</title>
+  <style>
+    .loader {
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      
+      /* color: #333;
+      border: #333 1px dotted; */
+    }
+    .ball-1{
+      position: absolute;
+      width: 20%;
+      height: 20%;
+      background: black;
+      border-radius: 50%;
+      left: 0;
+      animation: animate1 1s ease-in-out 30;
+      
+    }
+    .ball-2{
+      background: black;
+      position: rela/tive;
+      position: absolute;
+      width: 20%;
+      height: 20%;
+      left: 33%;
+      border-radius: 50%;
+      animation: animate1 1s ease-in-out 30;
+      animation-delay: 1.5s;
+    }
+    .ball-3{
+      background: black;
+      /* position: relative; */
+      position: absolute;
+      width: 20%;
+      height: 20%;
+      left: 66%;
+      border-radius: 50%;
+      animation: animate1 1s ease-in-out 30;
+      animation-delay: 2.25s;
+
+    }
+    @keyframes animate1 {
+      50% {
+        top: 15;
+      }
+      100% {
+        top: 30px;
+      }
+      
+    }
+
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="ball-1"></div>
+    <div class="ball-2"></div>
+    <div class="ball-3"></div>
+  </div>
+</body>
+</html>
