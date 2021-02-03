@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid area</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas: 
+        'header header header'
+        'content content content'
+        'box-1 box-2 box-3'
+        'footer footer footer';
+    }
+    header{
+      grid-area: header;
+      border: 1px black solid;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+
+    </header>
+    <section>
+
+    </section>
+    <aside>
+
+    </aside>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <footer>
+
+  </footer>
+</body>
+</html>

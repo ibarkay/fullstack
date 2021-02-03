@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid media quieris</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 1px;
+
+    }
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2,auto);
+      }
+    }
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: repeat(1,auto);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam tempore dolorum similique rem incidunt!</p>
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam tempore dolorum similique rem incidunt!</p>
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam tempore dolorum similique rem incidunt!</p>
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam tempore dolorum similique rem incidunt!</p>
+    </div>
+  </div>
+</body>
+</html>

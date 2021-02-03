@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24.3 grid</title>
+  <style>
+ 
+    .item {
+      padding: 3rem;
+      /* border: 1px solid black; */
+      background: #f4f4f4;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 6%;
+    }
+    .item.header {
+      background: red;
+      grid-area: header;
+    }
+    .item.sidebar{
+      background: blue;
+      grid-area: sidebar;
+    }
+    .item.content{
+      background: green;
+      grid-area: content;
+    }
+    .item.sidebar-2{
+      background: purple;
+      grid-area: sidebar-2;
+    }
+    .item.footer{
+      grid-area: footer;
+      background: yellow;
+    }
+    /* phone */
+    @media screen and (min-width: 500px){
+      
+      .grid{
+        display: grid;
+        grid-template-areas: 
+      "header"
+      "sidebar"
+      "content"
+      "sidebar-2"
+      "footer";
+      grid-gap: 10px;
+      }
+    }
+      /* tablet */
+    @media screen and (min-width: 760px){
+      .grid{
+        display: grid;
+        grid-template-areas: 
+      "header header header header"
+      "sidebar content content content"
+      "sidebar-2 sidebar-2 sidebar-2 sidebar-2"
+      "footer footer footer footer";
+      grid-gap: 10px;
+      }
+      }
+      /* desktop */
+      @media screen and (min-width: 1000px){
+        .grid {
+          display: grid;
+          grid-template-rows: 1fr 2fr 1fr 1fr;
+          grid-template-areas: 
+          "header header header header"
+          "sidebar content content sidebar-2"
+          "footer footer footer footer";
+          grid-gap: 10px;
+        }
+      }
+    
+    .container {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid">
+      <div class="item header">header</div>
+      <div class="item sidebar">sidebar</div>
+      <div class="item content">content</div>
+      <div class="item sidebar-2">sidebar-2</div>
+      <div class="item footer">footer</div>
+      
+    </div>
+
+  </div>
+</body>
+</html>
