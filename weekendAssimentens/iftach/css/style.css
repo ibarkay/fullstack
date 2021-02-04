@@ -1,0 +1,116 @@
+:root {
+  --bg-color : rgb(1, 1, 26);
+  --bg-color2 :  rgba(2, 2, 100,0.8) ;
+  --text-col : #ccc;
+  --nav-bar-col :rgb(3, 3, 150);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Londrina Solid', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-col);
+  font-size: 1.3rem;
+}
+.page-scrool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color2);
+  width: 100vw;
+  height: 100vh;
+}
+.overlay {
+  position: absolute;
+  background:url("/img/pattern.jpg");
+  width: 100%;
+  height: 100%;
+  opacity: 0.07;
+}
+.page-container {
+  background: var(--bg-color);
+  border-radius: 3%;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 1;
+}
+.navbar {
+  display: flex;
+  color: #ccc;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: var(--nav-bar-col);
+  /* border: 1px red solid; */
+  
+  
+}
+.navbar > ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.navbar  li  {
+  position: relative;
+  /* border: 1px red solid; */
+  padding: 2rem;
+  
+}
+a {
+  text-decoration: none;
+  color: var(--text-col);
+  font-size: 2rem; 
+}
+.navbar li:hover{
+  background:var(--bg-color2);
+  transition: all 0.7s ease;
+}
+.main-sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 80%;
+  /* border: 1px red solid; */
+}
+.main-sec {
+  text-align: left;
+}
+.main-sec .picture-col {
+  position: relative;
+  /* border: 1px red solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.main-sec .picture-col .pic-box {
+  width: 50%;
+  height: 60%;
+  background: url("/img/me.jpg") no-repeat center center/cover;
+  border-radius: 50%;
+  border: 0.4rem var(--text-col) solid;
+  box-shadow: 10px 10px var(--bg-color2);
+  margin: 0 1rem;
+}
+.main-sec  h1{
+    margin: 1.3rem 0;
+    font-size: 3rem;
+}
+.main-sec  p{
+  font-size: 2rem;
+}
+.main-sec h3{
+  background: red;
+  
+}
+.main-sec .info  {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+ 
+}

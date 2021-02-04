@@ -2,7 +2,11 @@
   display: grid;
   grid-template-columns: repeat(8,auto);
   grid-template-rows: repeat(6,auto);
+  grid-gap: 10px;
 }
+/* .grid >img.img-1 {
+  background: center/cover;
+} */
 .grid >img {
   background: #333;
   width: 100%;
