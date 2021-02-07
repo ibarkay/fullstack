@@ -10,7 +10,7 @@
   box-sizing: border-box;
   font-family: 'Londrina Solid', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-col);
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
 }
 .page-scrool {
   display: flex;
@@ -28,6 +28,7 @@
   opacity: 0.07;
 }
 .page-container {
+  position: relative;
   background: var(--bg-color);
   border-radius: 3%;
   width: 80%;
@@ -71,36 +72,43 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  height: 80%;
+  height: 100%;
   /* border: 1px red solid; */
 }
 .main-sec {
   text-align: left;
+  
 }
 .main-sec .picture-col {
   position: relative;
+  width: 100%;
+  height: 100%;
   /* border: 1px red solid; */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top ;
   text-align: center;
   
 }
 .main-sec .picture-col .pic-box {
-  width: 50%;
-  height: 60%;
+  position: absolute;
+  top: 80px;
+  width: 40%;
+  height: 40%;
   background: url("/img/me.jpg") no-repeat center center/cover;
   border-radius: 50%;
   border: 0.4rem var(--text-col) solid;
   box-shadow: 10px 10px var(--bg-color2);
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
+  
+  
 }
 .main-sec  h1{
     margin: 1.3rem 0;
-    font-size: 3rem;
+    font-size: 1rem;
 }
 .main-sec  p{
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .main-sec h3{
   background: red;
@@ -112,5 +120,19 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  padding-bottom: 150px;
  
+}
+.overlay-2{
+  position: absolute;
+  background: url('/img/pat22.png') center;
+  top: 0;
+  opacity: 0.15;
+  width: 100%;
+  height: 100%;
+  border: #ccc 2px solid;
+}
+#some-id {
+  
+  transition: all 0.5s ease;
 }
