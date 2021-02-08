@@ -17,7 +17,7 @@
 //   const welcome = 'Welcome to Appleseeds Bootcamp!';
 //   return welcome;
 // }
-const welcome = () => {
+const welcome = function () {
   const welcomey = 'Welcome to Appleseeds Bootcamp!';
   return welcomey;
 };

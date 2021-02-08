@@ -1,15 +1,6 @@
-const fn = (function (wellcome) {
-  return wellcome;
-}('Welcome to Appleseeds Bootcamp!'));
+function leapYear(year)
+{
+  return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+}
 
-const power = (a) => Math.pow(a, 2);
-
-const squareRoot = (function (a) {
-  return Math.sqrt(a);
-}(4));
-
-const randomNumbers = (function (a, b) {
-  return Math.random() * (a - b) + b;
-}(2, 100));
-
-console.log(randomNumbers);
+console.log(leapYear(2100));

@@ -16,7 +16,7 @@
 // Immediately Invoked Function Expression
 
 (function (age) {
-  return `You are cool and age ${age}`;
+  console.log( `You are cool and age ${age}`);
 }(10));
 
 // From function declarations to explicit and implicit return functions (one of each).
@@ -25,6 +25,7 @@
 //   return welcome;
 // }
 const wellcome = () => 'Welcome to Appleseeds Bootcamp!';
+const wellcome = () => { return 'Welcome to Appleseeds Bootcamp!'};
 
 // function power(a) {
 //   const myNumber = a;
@@ -32,13 +33,15 @@ const wellcome = () => 'Welcome to Appleseeds Bootcamp!';
 //   return result;
 // }
 const power = (a) => Math.pow(a, 2);
+const power = (a) => {return Math.pow(a, 2)};
 
 // From function expressions to IIFE functions.
 // const squareRoot = (a) => Math.sqrt(a);
 
-const squareRoot = (function (a) {
+(function (a) {
   return Math.sqrt(a);
-}(2));
+}(2)); 
+
 
 // const randomNumbers = (a, b) => Math.random() * (a - b) + b;
 

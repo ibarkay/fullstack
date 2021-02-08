@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.2 - grade assigner</title>
+</head>
+<body>
+  <script>
+//     Create a function that takes 1 argument, a number score.
+// Returns either “A”, ”B”, “C”, “D”, “F”.
+// score of:
+// 0-64 is a “F”
+// 65-69 is a “D”
+// 70-79 is a “C”
+// 80-89 is a “B”
+// 90-100 is an “A
+    const num = parseInt(window.prompt("score ?", "0-100"));
+
+    function gradeMe(num){
+      if (num <= 64) {
+        return "F";
+      }else if (num <= 69) {
+        return "D"
+      } else if (num <= 79) {
+        return "C";
+      }else if (num <= 89) {
+        return "B";
+      }else return "A";
+    } 
+    alert(gradeMe(num));
+  </script>
+</body>
+</html>
