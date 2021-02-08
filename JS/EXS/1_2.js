@@ -3,7 +3,6 @@
 
 1. Which of the following is/are strings?
 
-
 c) '4'
 
 2. Which of the following is/are numbers?
@@ -18,15 +17,11 @@ d) -4
 a) true
 b) false
 
-
 4. What is the result of 80 + 71.2?
 
 a) 151.2
 
-
-
 5. What is the result of "80" + 71.2?
-
 
 c) "8071.2"
 
@@ -34,28 +29,26 @@ c) "8071.2"
 
 a) number
 
-
 7. Does "100" + 30 produce a number or a string?
-
 
 b)string
 
 */
 
-//------Submit your answers under the question------//
+// ------Submit your answers under the question------//
 
-//create three different ways to declare variables
-var one = "one";
-let oney = "one";
-const ones = "one";
+// create three different ways to declare variables
+const one = 'one';
+const oney = 'one';
+const ones = 'one';
 
-//declare a variable and reassign a value to it
-let vary = "";
-vary = "hi";
+// declare a variable and reassign a value to it
+let vary = '';
+vary = 'hi';
 
-//create a variable and after that assign a string with its value being: He's got it!
-let varys = "";
-vary += "He's got it!"
+// create a variable and after that assign a string with its value being: He's got it!
+const varys = '';
+vary += "He's got it!";
 
 /*
 1. create a variable and assign a value on how much a restaurant bill is.
@@ -64,15 +57,15 @@ vary += "He's got it!"
 3. create a variable that will calculate the bill * tax and its output would be: Your total bill is <total bill> $.
  */
 
- let price = 0;
- price += 100;
- let tax = 0.17;
- let total = price + (price * tax);
- console.log(total)
+let price = 0;
+price += 100;
+const tax = 0.17;
+const total = price + (price * tax);
+console.log(total);
 // Round the number 50.6 to its nearest integer
-let floty = 50.6
+const floty = 50.6;
 console.log(Math.round(floty));
 
-//Create a variable that is undefined
+// Create a variable that is undefined
 let dog;
-console.log(typeof(dog));
+console.log(typeof (dog));

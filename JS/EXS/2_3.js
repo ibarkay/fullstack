@@ -1,4 +1,4 @@
-function circle(radius){  
+function circle(radius) {
   return radius * 2 * 3.14;
 }
 

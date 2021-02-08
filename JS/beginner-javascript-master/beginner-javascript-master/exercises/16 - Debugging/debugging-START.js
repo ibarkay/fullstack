@@ -6,8 +6,13 @@ const people = [
 
 people.forEach((person, index) => {
   console.log(person.name);
+  if (person.name === 'Wes'){
+    console.warn('Dumb name');
+  }
 });
 
+
+console.table(people);
 // Console Methods
 
 // Callstack
@@ -25,6 +30,7 @@ people.forEach((person, index) => {
 // Some Setup Code
 
 function doctorize(name) {
+  console.count('running ')
   return `Dr. ${name}`;
 }
 

@@ -1,12 +1,12 @@
-function describeCountry(country,population,capitalCity){
-  return `${country} has ${population} pepole and its capital city is ${capitalCity}`
+function describeCountry(country, population, capitalCity) {
+  return `${country} has ${population} pepole and its capital city is ${capitalCity}`;
 }
-let london = describeCountry('england','7 mil','london');
-let jerusalem = describeCountry('israel','8 mil','jerusalem');
-let aman = describeCountry('jordan','40 mil','aman');
+const london = describeCountry('england', '7 mil', 'london');
+const jerusalem = describeCountry('israel', '8 mil', 'jerusalem');
+const aman = describeCountry('jordan', '40 mil', 'aman');
 
-listy = [london,jerusalem,aman];
+listy = [london, jerusalem, aman];
 
-listy.forEach(element => {
+listy.forEach((element) => {
   console.log(element);
 });
