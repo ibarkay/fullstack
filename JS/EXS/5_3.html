@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.3 - password Validation</title>
+</head>
+<body>
+  
+
+
+  <script>
+    function valPassIF(pwd){
+      if (pwd.length >= 7){
+        console.log('strong');
+      }else console.log('Weak');
+      
+    }
+    function valPassTEN(pwd){
+      console.log((pwd.length >= 7) ? 'Strong' : 'Weak') ;
+      
+    }
+    function valPassLOGIC(pwd){
+      console.log((pwd.length >= 7 && pwd ? 'Strong' : 'Weak')) ;
+      
+    }
+    function not7(pwd){
+      console.log((pwd.length > 7) ? 'very strong' : 'weak');
+    }
+    function valPassAdvance(pwd){
+      console.log('running...');
+      (pwd.length === 7 ) ? console.log('strong') : not7(pwd);
+    };
+
+
+    // call
+    // valPassIF('123456');
+    valPassAdvance('12345678888');
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .keys {
+      background: url('./mannerstal-world-map.jpg') center no-repeat center/cover;
+      display: float;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      border: 1px red solid;
+      width: 150px;
+      height: 150px;
+    }
+    .container {
+      height: 100vh;
+      background: url('./mannerstal-world-map.jpg') no-repeat center center/cover;
+    }
+    .Turt {
+      position: relative;
+      --x : 10px;
+      --y : 10px;
+      --rotate : 0;
+      transform:  translateX(var(--x)) translateY(var(--y)) rotateY(var(--rotate));
+      transition: all 0.2s ease;
+    }
+  </style>
+
+
+
+  <div class="container">
+    <img width="100" src="./yaarIma.png" alt="sample" class="Turt">
+    <div class="keys"></div>
+
+  </div>
+
+
+
+  <script>
+    // globals
+  const Turtle = document.querySelector('.Turt');
+  let x = 0;
+  let y = 0;
+  const speed = 5;
+  let flipped = false;
+  
+
+function handleKeyDown(event){
+    if ((x >= 200 || x < -16) || (y <= -20 || y > 50)) {
+    x = 0;
+    y = 0;
+  }
+  console.log(x,y)
+  if (!event.key.includes("Arrow")) {return ;}
+  switch (event.key){
+    case  'ArrowUp' :
+      y = y -1;
+      break;
+    case  'ArrowDown' :
+      y = y +1;
+      break;
+    case  'ArrowLeft' :
+      x = x -1;
+      flipped = true;
+      break;
+    case  'ArrowRight' :
+      x = x +1;
+      flipped = false;
+      break;
+      default:
+        console.log('not valid');
+        break;
+  }
+  
+  Turtle.setAttribute('style',`
+  --rotate : ${flipped ? `180deg` : '0'};
+  --x : ${x*speed}px;
+  --y : ${y*speed}px
+  `);
+  
+}
+
+
+
+  window.addEventListener('keydown',handleKeyDown);
+
+
+  </script>
+</body>
+</html>
