@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.5 - fun with arrays</title>
+</head>
+<body>
+  
+
+
+  <script>
+// Instructions
+// 1. Fill an array with 100 of a same object using array fill
+// method.
+  let arrik = new Array(100);
+  arrik.fill(':)');
+// 2. Create an array with numbers ranging from 1-100 using
+// the Array.from method.
+  let arrik2 = Array.from(Array(101).keys());
+  arrik2.shift();
+  console.log(arrik2); 
+// 3. Convert only values of an object into one array.
+    const obj = {1:'1',2:'tow',3:'three'};
+    let arrik3 = Object.values(obj);
+    console.log(arrik3)
+    
+// 4. Convert an array into one object.
+const arrik4 = Object.assign({}, arrik3);
+console.log(arrik4);
+
+// 5. Find out if an array is an array.
+console.log(Array.isArray(arrik));
+// 6. Copy an array.
+// • Create a copy of an array that won’t effect the original
+// array if modified.
+let copy = [...[arrik]];
+console.log('this is a copy array :',copy);
+
+// • Create a copy of an array that will effect the original
+// array if modified.
+let copy2 = arrik2.splice(0);
+console.log(copy2);
+  </script>
+</body>
+</html>

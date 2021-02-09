@@ -34,7 +34,9 @@
       (pwd.length === 7 ) ? console.log('strong') : not7(pwd);
     };
 
-
+    function advancedValidation(password) {
+     return (password.length > 7 && password.match(/[A-Z]+/)) ? 'Very Strong' : password.length === 7 ? 'Strong' : 'Weak';
+     
     // call
     // valPassIF('123456');
     valPassTEN('1234')
