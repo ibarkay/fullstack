@@ -22,7 +22,8 @@
       
     }
     function valPassLOGIC(pwd){
-      console.log((pwd.length >= 7 && pwd ? 'Strong' : 'Weak')) ;
+      // console.log((pwd.length >= 7 && pwd ? 'Strong' : 'Weak')) ;
+      console.log((password.length > 7 && 'Strong') || 'Weak');
       
     }
     function not7(pwd){
@@ -36,6 +37,7 @@
 
     // call
     // valPassIF('123456');
+    valPassTEN('1234')
     valPassAdvance('12345678888');
   </script>
 </body>
