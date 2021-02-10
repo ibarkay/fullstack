@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.5 - count_the_letters</title>
+</head>
+<body>
+  
+
+  <script>
+    const array = ["Hello", "Good Day", "Your Welcome", "hotdog","hamburgers"];
+
+    const newArr = [];
+    
+    const arrik = newArr.concat()
+    let stringy = '';
+    array.forEach(element => {
+      
+      stringy += element.toLocaleLowerCase().split('');
+      
+    });
+    let stringy2 = stringy.replace(/,/g,"").replace(/ /g,"");
+
+    const objy = {};
+    for (i=0;i<stringy2.length;i++){
+      objy[stringy2[i]] = (stringy2.split(stringy2[i]).length - 1)
+    }
+    
+    
+    
+  </script>
+</body>
+</html>

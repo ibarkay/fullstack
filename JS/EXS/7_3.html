@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.3 - </title>
+</head>
+<body>
+  
+  <script>
+    const book1 =  {
+      name : 'boky1', 
+      author : 'leethax',
+      year : 1985,
+    };
+    const book2 =  {
+      name : 'boky2', 
+      author : 'ibaraky',
+      year : 1989,
+    };
+    const book3 =  {
+      name : 'boky3', 
+      author : 'ibaraky',
+      year : 1989,
+    };
+
+    const bookUtils = {
+      getFirstPublished : function (b1,b2){
+        return b1 > b2 ? b2 : b1; 
+      },
+      setNewEdition : function (b,newyear){
+        b.latestEdition = newyear;
+      },
+      setLanguage : function(b,lang){
+        b.language = lang;
+      },
+      setTranslation : function(b,language,translator){
+        b.translation = {
+          translator : translator,
+          language : language,
+        }
+      },
+      setPublisher : function(b,name,location){
+        b.publisher = {
+          name : name ,
+          location : location,
+        }
+      },
+      isSamePublisher: function(b1,b2){
+        return (b1.publisher.name === b2.publisher.name && b1.publisher.location === b2.publisher.location) ? true : false ; 
+      }
+    };
+
+
+  </script>
+</body>
+</html>

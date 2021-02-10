@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/lodash"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <input type="text" name="first" value="iftach">
+  <script>
+    const age = 100 ;
+
+    const person = {
+      age ,
+      name : 'iftach',
+      'cool-dude' : true,
+      '777': true,
+      clothing : {
+        shirts: 10,
+        pants :2 ,
+      },
+      sayHello : function(greeting='hey'){
+        return `${greeting} ${this.name}`
+      },
+      sneez : () => {
+        console.log('AAHHH chooo');
+      },
+
+    };
+
+    person.job = 'web-dev';
+    const nameInput = document.querySelector('[name="first"]');
+
+    const name = nameInput.value
+    // console.log(name);
+    
+    const person1 = {
+      first : 'iftach',
+      last : 'barkay',
+      clothing : {
+        shirts :10,
+        pants : 2,
+      }
+    }
+    const person2 = {
+      first : 'iftach',
+      last : 'barkay',
+    }
+    
+    // const person3 = person1;
+    // person3.first = 'wes';
+    // const person3 = {...person1};
+    const person3 = _.cloneDeep(person1);
+    person3.first = 'test';
+    person3.clothing.shirts = 100;
+
+    function doStuff(data){
+      data = 'somthing else';
+    }
+
+
+    function doStuff2(data){
+      data.first = 'TESTS';
+    }
+
+    doStuff2(person1);
+
+
+
+    // const frozIftach = Object.freeze(person);
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.2 - methods</title>
+</head>
+<body>
+  
+
+  <script>
+    const myCountry = {
+      country : 'israel',
+      capital : 'jerusalem',
+      language : 'hebrew',
+      population : 9000000,
+      neiburs : 0,
+      checkIsland : function(){
+        this.neiburs <=0 ? this.isIsland = true : this.isIsland = false;
+      },
+      describe : function (){
+        console.log( `${this.country} has ${this.population} pepole, their mother tongue is ${this.language}, they have 3 nighbouring contries and a capital called ${this.capital}`)
+      },
+    }
+    myCountry.describe();
+
+  </script>
+</body>
+</html>

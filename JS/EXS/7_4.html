@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.4 </title>
+</head>
+<body>
+  
+
+  <script>
+    const candyStore = {
+        candies: [
+            {
+              name: "mint gum",
+              id: "as12f",
+              price: 2,
+              amount: 2
+            },
+            {
+              name: "twix",
+              id: "5hd7y",
+              price: 5,
+              amount: 4
+            },
+          ],
+        cashRegister: 200
+      }
+      function getCandy(candyStore, id){
+        return candyStore.candies.find(x => x.id === id);
+      } 
+      function getPrice(candyStore, id){
+        const choise =  candyStore.candies.find(x => x.id === id);
+        return choise.price;
+      }
+      function addCandy(candyStore, id, name, price){
+        candyStore.candies.push({id:id,name:name,price:price,amount:1,})
+      }
+      function buy(candyStore, id){
+        const choise =  candyStore.candies.find(x => x.id === id);
+        console.log(id,choise);
+        candyStore.cashRegister += choise.price;
+        choise.amount -= 1;
+      }
+
+  </script>
+</body>
+</html>
