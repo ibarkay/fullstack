@@ -5,26 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <title>Amazon | we like $$$ </title>
 </head>
 <body>
   <!-- nav-bar Start -->
   <div id="navbar">
     <div class="nav-up">
-      <div class="logo"></div>
+      <a href="#">
+        <div class="logo"></div>
+      </a>
       <div class="location">
-        <span>Deliver to</span>
-        <span>Israel</span>
-        <span class="icon-loc"></span>
+        <a href="#">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Deliver to <br> <b>Israel</b> </p>
+        </a>
       </div>
-      <div class="search"></div>
-      <div class="flag"></div>
-      <div class="account"></div>
-      <div class="orders"></div>
-      <div class="cart"></div>
+      <div class="search">
+        <div class="left-btn">All</div>
+        <input type="text" name="" id="" class="searchbar" placeholder="bad usb">
+        <div class="right-btn"><i class="fas fa-search"></i></div>
+
+      </div>
+      <div id="right-nav">
+        <div class="flag">
+          <img src="/img/US-United-States-Flag-icon.png" alt="">
+          <i class="fas fa-sort-down"></i>
+        </div>
+        <div class="account">
+          <a href="#">
+            <span>Hello, Sign in</span><br>
+            <span>Account & Lists</span>
+          </a>
+        </div>
+        <div class="orders">
+          <a href="#">
+            <span>Returns</span><br>
+            <span>& oreders</span>
+          </a>
+        </div>
+        <div class="cart">
+          <a href="#">
+            <i class="fas fa-shopping-cart"></i>
+            <span>cart</span>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="nav-down">
-      <div class="hamburger"></div>
+      <div class="hamburger">=</div>
       <a href="#" class="deals">Today's Deals</a>
       <a href="#" class="service">Customer Service</a>
       <a href="#" class="gift-card">Gift Cards</a>
@@ -46,7 +75,7 @@
             <img src="/img/p1.jpg" alt="1">
             <img src="/img/31Dhi4nbwDL._AC_.jpg" alt="2">
             <img src="/img/41kBIcyNoeL._AC_.jpg" alt="3">
-            <img src="" alt="4">
+            <!-- <img src="" alt="4"> -->
           </div>
           <div class="big-image-container">
             <img src="/img/p1.jpg " alt="big">
@@ -57,8 +86,10 @@
         <h1>Hak5 USB Rubber Ducky Deluxe Field Guide Book</h1>
         <a href="" class="by-line-info">Brand: Hak5</a>
         <div class="stars-rating-containet">
-          <i></i>
-          <a href="" class="rating">74 ratings</a>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><a href="" class="rating">74 ratings</a>
+          </div>
+          
           <br>
           <a href="#" class="askLinks">4 answered questions</a>
         </div>
@@ -80,23 +111,71 @@
       </div>
       <div id="right-col">
         <div id="buy-box">
-          <span class="price">$119.99</span>
-          <div class="msg-delivery">Arrives: Feb 25 - 28</div>
-          <div class="lefts">Only 11 left in stock - order soon.</div>
-          <button class="quan-btn">qty 1</button>
-          <button class="add-to-cart-btn">add to cart</button>
-          <button class="buy-now-btn">buy now</button>
-          <div class="secure"></div>
-          <i>PUT ICON HERE!</i> 
-          <a href="">Secure transaction</a>
-          <tbody>
-            
-          </tbody>
+          <div class="container">
+            <span  class="price-tag">$119.99</span>
+            <div class="msg-delivery">Arrives: Feb 25 - 28</div>
+            <div class="lefts">Only 11 left in stock - order soon.</div>
+            <span class="quan-btn"> qty : 1</span>
+            <span class="obtn add-to-cart-btn"><i class="fas fa-cart-plus"></i>Add To Cart</span>
+            <span class="obtn buy-now-btn"><i class="fas fa-play"></i>Buy Now</span>
+            <div class="secure"></div>
+            <i class="fas fa-lock"></i> 
+            <a href="">Secure transaction</a>
+            <tbody>
+              
+            </tbody>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
         </div>
       </div>
 
     </div>
     
+    <hr>
+    <div id="carusel">
+      <div class="container">
+        <div class="card arrow">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="card">
+          <img  class="responsive" src="/img/other-p1.jpg" alt="pic">
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam?</div>
+          <div class="stars">XXXX</div>
+          <div class="price">$350</div>
+        </div>
+        <div class="card">
+          <img  class="responsive" src="/img/other-p2.jpg" alt="pic">
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam?</div>
+          <div class="stars">XXXX</div>
+          <div class="price">$350</div>
+        </div>
+        <div class="card">
+          <img  class="responsive" src="/img/other-p3.jpg" alt="pic">
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam?</div>
+          <div class="stars">XXXX</div>
+          <div class="price">$350</div>
+        </div>
+        <div class="card">
+          <img  class="responsive" src="/img/other-p4.jpg" alt="pic">
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam?</div>
+          <div class="stars">XXXX</div>
+          <div class="price">$350</div>
+        </div>
+        <div class="card">
+          <img  class="responsive" src="/img/other-p5.jpg" alt="pic">
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam?</div>
+          <div class="stars">XXXX</div>
+          <div class="price">$350</div>
+        </div>
+        <div class="card arrow">
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
