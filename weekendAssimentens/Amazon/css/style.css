@@ -192,12 +192,18 @@ a {
 #left-col .alt-image {
   /* border: 1px yellow solid; */
   height: 100%;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+  display: flex;
+  flex-direction: column;
 }
 #left-col .alt-image img{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border: var(--star-orange) 1px solid;
+  box-shadow: #FFA41C 0px 0 5px ;
+}
+#left-col .alt-image img:hover{
+  cursor: pointer;
 }
 #center-col {
   /* border: blue 1px solid; */
@@ -207,9 +213,14 @@ a {
 #center-col h1 {
   margin: 10px;
 }
-#center-col a {
-  color: #007600;
+#center-col a,
+#carusel .card a{
+  color: #007185;
   margin: 0 10px;
+}
+#center-col a:hover,
+#carusel .card a:hover{
+  text-decoration: underline;
 }
 #center-col .features-bullets{
   margin: 12px;
@@ -278,6 +289,7 @@ a {
 #carusel {
   width: 100%;
   height: 350px;
+  
 }
 #carusel .container {
   width: 100%;
@@ -294,7 +306,7 @@ a {
   height: 100%;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 #carusel .card img {
   width: 100%;
@@ -302,4 +314,17 @@ a {
 #carusel .card.arrow {
   width: 20%;
   /* background: black; */
+}
+#carusel .btn-grey {
+  border-radius: 8px;
+  border: black 0.2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:var(--grey-btn);
+  width: 40px;
+  height: 40px;
+}
+#carusel .btn-grey:hover {
+  cursor: pointer;
 }
