@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.3 -sorting strings</title>
+</head>
+<body>
+  
+  <!-- a.1. Sort the array of strings from descending to ascending
+            order
+            a.2. Sort the array of strings from descending to ascending
+            order.
+ -->
+  <script>
+    const foods = ["falafel", "sabich", "hummus", "pizza with extra pineapple"];
+
+    // a1
+    console.log(foods.sort());
+    // a2
+    console.log(foods.reverse());
+
+    // b
+    const foodsWithUpperCase = [
+                                "falafel",
+                                "Sabich",
+                                "hummus",
+                                "piz"];
+                                
+  console.log(foodsWithUpperCase.sort(function (a,b){
+    if (a.toLocaleLowerCase() > b.toLocaleLowerCase()) return 1;
+    if (a.toLocaleLowerCase() < b.toLocaleLowerCase()) return -1;
+    return 0;
+  }));
+  console.log(foodsWithUpperCase.sort(function (a,b){
+    if (a.toLocaleLowerCase() > b.toLocaleLowerCase()) return -1;
+    if (a.toLocaleLowerCase() < b.toLocaleLowerCase()) return 1;
+    return 0;
+  }));
+
+  const words = ["apple", "supercalifragilisticexpialidocious","hi", "zoo"];
+    //   Sort the array of strings from the longest word to the
+    // shortest word only using the sort function
+  sortedList = words.sort(function(a,b){
+    if (a.length > b.length) return -1;
+    if (a.length < b.length) return 1;
+    return 0;
+  });
+  console.log(sortedList)
+
+
+  </script>
+</body>
+</html>
