@@ -60,9 +60,14 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.nav-up .location i{
+  align-self: flex-end;
+}
 .nav-up .location a{
   /* border: 1px red solid; */
   display: flex;
+  
 }
 /* .nav-up .location i{
   align-self: flex-end;
@@ -77,25 +82,29 @@ a {
   height: 30px;
 }
 .nav-up .search  {
-  /* float: right; */
   /* border: 1px red solid; */
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   height: 30px;
 }
 .nav-up .search input{
   width: 80%;
+  height: 100%;
 }
 .nav-up .search .left-btn,
 .nav-up .search .right-btn{
   font-size: 10px;
   background: var(--grey-btn) ;
   width: 30px;
+  height: 100%;
   color: black;
-  justify-self: center;
-  text-align: center;
-  align-items: center;
+  /* justify-self: center; */
+  /* text-align: center;  */
+  /* align-items: center; */
   border-radius: 10% 0 0 10% ;
 }
 .nav-up .search .right-btn {
@@ -123,6 +132,10 @@ a {
 #right-nav img {
   width: 18px;
   height: 18px;
+}
+#right-nav .account {
+  
+  width: 400px;
 }
 .nav-down {
   font-size: 14px ;
@@ -217,6 +230,7 @@ a {
 #carusel .card a{
   color: #007185;
   margin: 0 10px;
+
 }
 #center-col a:hover,
 #carusel .card a:hover{

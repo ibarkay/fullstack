@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8.2 - Maps vs Objects performance</title>
+</head>
+<body>
+  <h1>Maps vs Objects performance</h1>
+  <!-- 1. Who can add key and value pairs faster in a for loop?
+        • Create an empty Object and assign it to a variable.
+        • Create a start timer for your object to be measured.
+        • Create a for loop that will iterate a million times. Inside
+        your for loop on each iteration create a new key, value
+        pair to your object using the variable I.
+        • Do the same procedure for a Map object.
+        • Compare the times.
+        You may be surprised from the results :) -->
+  <script>
+
+    // const maxCount = 1000000;
+    // console.time("My operation")// <---- Starts the timer
+    // for(let i =0; i < maxCount; i++){
+    // //Perform the operation to be measured multiple times
+    // }
+    // console.timeEnd("My operation") // <---- Stops the time
+
+    const objy = {
+
+    };
+    const maxCount = 1000000;
+    console.time('my op');
+    for (let i = 0; i < maxCount; i++){
+      objy[i] = 'blah';
+    }
+    console.timeEnd('my op');
+
+    const mapy = new Map();
+    console.time('my op2');
+    for (let i= 0 ; i < maxCount; i++){
+      mapy.set(i,'blah');
+    };
+    console.timeEnd('my op2');
+
+
+  </script>
+</body>
+</html>
