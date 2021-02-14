@@ -8,28 +8,22 @@
 </head>
 <body>
   <h1>Maps vs Objects performance</h1>
-  <!-- 1. Who can add key and value pairs faster in a for loop?
-        • Create an empty Object and assign it to a variable.
-        • Create a start timer for your object to be measured.
-        • Create a for loop that will iterate a million times. Inside
-        your for loop on each iteration create a new key, value
-        pair to your object using the variable I.
-        • Do the same procedure for a Map object.
-        • Compare the times.
-        You may be surprised from the results :) -->
+  <!-- 2. Who can find faster a specific property from itself?
+            Now that we populated 100000 properties to our
+            object’s find the following:
+            • Find out how long time would it take for the Object to
+            find a specific property from itself.
+            • Find out how long time would it take for the Map to find
+            a specific property from itself.
+ -->
   <script>
 
-    // const maxCount = 1000000;
-    // console.time("My operation")// <---- Starts the timer
-    // for(let i =0; i < maxCount; i++){
-    // //Perform the operation to be measured multiple times
-    // }
-    // console.timeEnd("My operation") // <---- Stops the time
+   
 
     const objy = {
 
     };
-    const maxCount = 1000000;
+    const maxCount = 100000;
     console.time('my op');
     for (let i = 0; i < maxCount; i++){
       objy[i] = 'blah';
@@ -43,6 +37,34 @@
     };
     console.timeEnd('my op2');
 
+    //  2
+    console.time('object spesiphic time');
+    for (let i=0;i< maxCount;i++){
+      let check = objy[i];
+    }
+    console.log(objy[50000]);
+    console.timeEnd('object spesiphic time');
+
+    console.time('map spesiphic time');
+    for (let i=0;i< maxCount;i++){
+      let check = mapy[i];
+    }
+    console.timeEnd('map spesiphic time');
+
+
+    // 3
+    // 3. Who is faster in adding a single entry?
+    // 4. Who is faster in deleting a single entry
+    console.time('del entry obj');
+    for (let i=0;i< maxCount;i++){
+      delete objy[i];
+    }
+    console.timeEnd('del entry obj');
+    console.time('del entry map');
+    for (let i=0;i< maxCount;i++){
+      mapy.delete(i);
+    }
+    console.timeEnd('del entry map');
 
   </script>
 </body>
