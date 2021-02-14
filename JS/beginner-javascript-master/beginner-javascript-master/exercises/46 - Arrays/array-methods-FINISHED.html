@@ -162,7 +162,7 @@
     // find all ratings that are above 2 with filter()
     function filterByMinRating(minRating) {
       return function (singleFeedback) {
-        return singleFeedback.rating > minRating
+        return singleFeedback.rating > minR ating
       }
     }
     const goodReviews = feedback.filter(filterByMinRating(4));

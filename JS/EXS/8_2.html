@@ -36,6 +36,7 @@
       mapy.set(i,'blah');
     };
     console.timeEnd('my op2');
+    console.log(mapy.get(1));
 
     //  2
     console.time('object spesiphic time');
@@ -55,16 +56,24 @@
     // 3
     // 3. Who is faster in adding a single entry?
     // 4. Who is faster in deleting a single entry
-    console.time('del entry obj');
-    for (let i=0;i< maxCount;i++){
-      delete objy[i];
-    }
-    console.timeEnd('del entry obj');
-    console.time('del entry map');
-    for (let i=0;i< maxCount;i++){
-      mapy.delete(i);
-    }
-    console.timeEnd('del entry map');
+    // console.time('del entry obj');
+    // for (let i=0;i< maxCount;i++){
+    //   delete objy[i];
+    // }
+    // console.timeEnd('del entry obj');
+    // console.time('del entry map');
+    // for (let i=0;i< maxCount;i++){
+    //   mapy.delete(i);
+    // }
+    // console.timeEnd('del entry map');
+
+    console.time('singel call for obj');
+    console.log(objy[300]);
+    console.timeEnd('singel call for obj');
+    console.time('singel call for map');
+    console.log(mapy.get(1));
+    console.timeEnd('singel call for map');
+
 
   </script>
 </body>

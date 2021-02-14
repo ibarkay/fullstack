@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.1 - callback function</title>
+</head>
+<body>
+  
+
+
+  <script>
+      // 1. Write a a function called ‘isString’ that receives 2
+      // arguments, a string and a callback function.
+      // The function checks that the string is indeed a string.
+      // If the string is a string, pass the string to a callback
+      // function which logs that string to the console.
+
+      function funcy(stringy){
+        console.log(stringy);
+      };
+      function isString(stringy,funcy){
+        return typeof(stringy) === 'string' && funcy(stringy);
+      };
+      const t = '12';
+      isString(t,funcy);
+
+      // 2. Create a function called ‘firstWordUpperCase’ that
+      // receives 2 arguments, a string and a callback function.
+      // The function will capitalize the first word in the sentence
+      // and pass the string to a callback function which will create
+      // dashes between the words.
+      function dashes(stringy){
+         return stringy.replace(/ /g,'-') ;
+      }
+      function firstWordUpperCase (stringy,dashes){
+        let arr = stringy.split(' ');
+        arr[0] = arr[0].toUpperCase();
+        stringy = arr.join(' ');
+
+        return dashes(stringy);
+      };
+      const b = firstWordUpperCase('iftach is leet',dashes);
+      console.log(b);
+      
+      // 4. Create your own function that will receive from one of its
+      // arguments a callback function.
+      function cally(stringush){
+        return stringush.toUpperCase();
+      }
+      function ib(stringush,cally){
+        return cally(stringush.replace(/ /g,'+++!+++'));
+      }
+      const c = ib('mmmm MMMM mmmm',cally);
+      console.log(c);
+  </script>
+</body>
+</html>
