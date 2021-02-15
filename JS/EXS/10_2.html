@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10.2 - forEach & map</title>
+</head>
+<body>
+  
+
+
+  <script>
+      // 1. Write a function called doubleValues which accepts an
+      // array and returns a new array with all the values in the
+      // array passed to the function doubled.
+      const values1 = [2,'iftach',3,5,6,10,500,10,'gali'];
+
+      function doubleValues(arr){
+        const newList = []
+        arr.forEach(element => {
+          newList.push(element *2);
+        });
+        return newList;
+      }
+      console.log(doubleValues(values1));
+
+      // 2. Write a function called onlyEvenValues which accepts an
+      // array and returns a new array with only the even values in
+      // the array passed to the function.
+      function onlyEvenValues(arr){
+        const newArr =[];
+          arr.forEach(i => {
+            i % 2 === 0 && newArr.push(i)
+          })
+          return newArr;
+      }
+      console.log(onlyEvenValues(values1));
+
+      // 3. Write a function called showFirstAndLast which accepts
+      // an array as an argument and returns a new array with only
+      // the first and last elements from the function’s argument
+      // array. The returned array should only contain elements that
+      // are strings.
+      function showFirstAndLast(arr){
+          const newArr2 = [];
+          arr.forEach(i => {
+            typeof(i) === 'string' && newArr2.push(i);
+          })
+          return [...[newArr2[0]],...[newArr2[newArr2.length -1]]];
+
+      }
+      console.log(showFirstAndLast(values1));
+
+      // 4. Write a function called vowelCount which accepts a
+      // string as an argument. The function should return an object
+      // which has the count of the number of vowel’s that are in
+      // the string. The key should be the vowel and the value
+      // should be the count. e.g. {a:3, o:2,u:4}.
+      // Should not be case sensitive.
+      
+
+      function vowelCount(stringy){
+        let yyyy = ['a','e','i','o'];
+        const objy = {};
+        yyyy.forEach(element => {
+          objy[element] = stringy.split(element).length -1;
+        });
+        return objy;
+     }
+      console.log(vowelCount('aiftacheioooobbsks'));
+
+      // 5. Write a function capitalize that takes a string as an
+      // argument and will return the whole string capitalized.
+
+      function capitalize(stringy){
+        return stringy.toUpperCase();
+      }
+      console.log(capitalize('iftach'));
+
+      // 6. Write a function called shiftLetters that takes a string as
+      // an argument and return’s an encoded string with each
+      // letter shifted down the alphabet by one.
+
+      function shiftLetters(stringy){
+        return Array.from(stringy).map(i => String.fromCharCode((i.charCodeAt(0) - 1)));
+      }
+      console.log(shiftLetters('iftach'));
+
+      // 7. Create a function called swapCase that takes a string as
+      // an argument and returns a string that every other word is
+      // capitalized. (you can use the fifth’s exercise's function to
+      // keep it dry)
+
+      function swapCase(string){
+        return string.split(' ').map((i,index) => index % 2 === 0 ? capitalize(i) : i);
+      }
+
+     console.log(swapCase('iftach barkay is leet for real.'));
+  </script>
+</body>
+</html>

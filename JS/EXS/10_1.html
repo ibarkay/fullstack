@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10.1 -map vs forEach  </title>
+</head>
+<body>
+  
+
+
+  <script>
+      const newReleases = [
+          {
+          id: 70111470,
+          title: "Die Hard",
+          boxart: "http://cdn-0.nflximg.com/images/2891/DieHard.jpg",
+          uri: "http://api.netflix.com/catalog/titles/movies/70111470",
+          rating: [4.0],
+          bookmark: [],
+          },
+          {
+          id: 654356453,
+          title: "Bad Boys",
+          boxart: "http://cdn-0.nflximg.com/images/2891/BadBoys.jpg",
+          uri: "http://api.netflix.com/catalog/titles/movies/70111470",
+          rating: [5.0],
+          bookmark: [{ id: 432534, time: 65876586 }],
+          },
+          {
+          id: 65432445,
+          title: "The Chamber",
+          boxart: "http://cdn-0.nflximg.com/images/2891/TheChamber.jpg",
+          uri: "http://api.netflix.com/catalog/titles/movies/70111470",
+          rating: [4.0],
+          bookmark: [],
+          },
+          {
+          id: 675465,
+          title: "Fracture",
+          boxart: "http://cdn-0.nflximg.com/images/2891/Fracture.jpg",
+          uri: "http://api.netflix.com/catalog/titles/movies/70111470",
+          rating: [5.0],
+          bookmark: [{ id: 432534, time: 65876586 }],
+          },
+          ];
+
+          // Instructions
+          // You are getting an array of objects of the recent video releases from
+          // your database.(array below). We only care about the portion of data
+          // we are getting.
+          // 1.Create a function that will loop over the array with the forEach
+          // method. Return from the function an array of objects. Each object
+          // will contain the id and name of the specific movie.
+          // 2. Create another function that will do the same thing expect now
+          // use the map method
+          const idName = function(movie) {
+            
+              const ans = {
+                id : movie.id,
+                name : movie.title,
+                
+              }
+              // debugger;
+              return ans;
+          };
+
+          const eachy = [];
+          eachy.push(newReleases.forEach(idName));
+          console.log(eachy);
+
+          const mapy = newReleases.map(idName);
+          console.log(mapy);
+          
+  </script>
+</body>
+</html>

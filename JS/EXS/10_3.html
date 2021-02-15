@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10.3 - Data massaging</title>
+</head>
+<body>
+  
+
+  <script>
+          const data = [
+          {
+          name: "John",
+          birthday: "1-1-1995",
+          favoriteFoods: {
+          meats: ["hamburgers", "sausages"],
+          fish: ["salmon", "pike"],
+          },
+          },
+          {
+          name: "Mark",
+          birthday: "10-5-1980",
+          favoriteFoods: {
+          meats: ["hamburgers", "steak", "lamb"],
+          fish: ["tuna", "salmon", "barracuda"],
+          },
+          },
+          {
+          name: "Mary",
+          birthday: "1-10-1977",
+          favoriteFoods: {
+          meats: ["ham", "chicken"],
+          fish: ["pike"],
+          },
+          },
+          {
+          name: "Thomas",
+          birthday: "1-10-1990",
+          favoriteFoods: {
+          meats: ["bird", "rooster"],
+          fish: ["salmon"],
+          },
+          },
+          {
+          name: "Mary",
+          birthday: "1-10-1977",
+          favoriteFoods: {
+          meats: ["hamburgers", "lamb"],
+          fish: ["anchovies", "tuna"],
+          },
+          },
+          ];
+          
+          // We are not getting the data as we want it. We are going to need to massage
+          // the data.
+          // Create separate functions for each questions below:
+          // 1. Create a function that returns all the names from the array.
+          // 2. Create a function that returns all the objects that are born before 1990.
+          // 3. Create a function that returns an object of all the different foods from all
+          // the objects as the key and the number of times that food is present in all the
+          // objects as the value.
+          // Example:
+          // { hamburgers: 3,
+          //  sausages: 1,
+          //  salmon: 3,
+          //  pike: 2,
+          //  steak: 1,
+          //  lamb: 2,
+          //  tuna: 2,
+          //  barracuda: 1,
+          //  ham: 1,
+          //  chicken: 1,
+          //  bird: 1,
+          //  rooster: 1,
+          //  anchovies: 1 }
+
+           // 1. Create a function that returns all the names from the array.
+           const namesy = data.forEach(i => console.log(i.name));
+          // 2. Create a function that returns all the objects that are born before 1990.
+          // console.clear();
+            const beforey = data.forEach(i => console.log(parseInt(i.birthday.split('-')[2]) < 1990 ? i : null));
+          // 3. Create a function that returns an object of all the different foods from all
+          // the objects as the key and the number of times that food is present in all the
+          // objects as the value.
+          console.clear();
+          function newObjy(data){
+              const ans = {};
+              let checkFish = [];
+              let checkFish2 = [];
+              let checkMeat = [];
+              let checkMeat2 = [];
+              data.forEach(i => checkFish.push(i.favoriteFoods.fish));
+              checkFish.forEach(i => {
+                i.forEach(i=> checkFish2.push(i));
+              })
+              data.forEach(i => checkMeat.push(i.favoriteFoods.meats));
+              checkMeat.forEach(i => {
+                i.forEach(i=> checkMeat2.push(i));
+              })
+              
+              checkFish2.forEach(i => ans[i] = (checkFish2.join(' ').split(i).length -1));
+              checkMeat2.forEach(i => ans[i] = (checkMeat2.join(' ').split(i).length -1));
+              console.log(ans);
+
+              
+          }
+          newObjy(data);
+  </script>
+</body>
+</html>
