@@ -183,6 +183,28 @@
 
     })
     console.log(cleanPeploe);
+
+    console.clear();
+
+    console.table(cleanPeploe)
+    const over40 = cleanPeploe.filter(i => i.age > 40);
+    console.log(over40);
+
+    const student = students.find(findByProp('id','565a'));
+    const student2 = students.find(findByProp('first_name','Micki'));
+    console.log(student,student2);
+
+    function findById(id){
+      return function isStud(stud){
+              return stud.id === id;
+              }
+    }
+    
+    function findByProp(prop, whatWeLookingFor){
+        return function stud(study){
+            return study[prop] === whatWeLookingFor ;
+        }
+    }
     
 
 

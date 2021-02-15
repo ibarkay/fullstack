@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11.2 - school method</title>
+</head>
+<body>
+  
+
+
+  <script>
+        const school = {
+        teachers: [
+        {
+        id: 1,
+        name: "Pinchas",
+        subjects: ["chemistry", "biology", "physics"],
+        students: [],
+        capacityLeft: 3,
+        },
+        {
+        id: 2,
+        name: "Williams",
+        subjects: ["history", "ethics"],
+        students: [],
+        capacityLeft: 2,
+        },
+        ],
+        students: [
+        {
+        id: 10,
+        name: "Jennifer",
+        age: 20,
+        },
+        {
+        id: 11,
+        name: "Howard",
+        age: 23,
+        },
+        {
+        id: 12,
+        name: "Old-Timmy",
+        age: 86,
+        },
+        {
+        id:13,
+        name: "Houston",
+        age: 21,
+        },
+        ],
+        };
+        // Take the school object and create the following methods to
+        // that object:
+        // 1. A method called “findPerson” that takes two arguments,
+        // a type (either a student or teacher), and an id.
+        // It will return a particular object of that person.
+        // 2. A method called “assignStudent” that takes two
+        // arguments, a student’s id and a subject.
+        // Assign all of the students to the first available teacher who
+        // teaches that subject and who is not in full capacity. If all of
+        // the teachers are in full capacity log to the console “Sorry,
+        // no available teachers left”
+        // 1
+        school['findPerson'] = function findMe(type,id){
+            return school[type].filter(i=>i.id === id);
+        } ;
+        // 2 -- TODO : check what if no found.
+        school['assignStudent'] = function assign(id,subjecty){
+          const stu = school.findPerson('students',id)[0].name;
+          const teach = school.teachers.filter(i=> (i.capacityLeft > i.students && i.subjects.find(j=> j === subjecty)))[0];
+          // console.log(teach);
+          teach.students.push(stu);
+          teach.capacityLeft -= 1;
+          // console.log(teach);
+
+          
+          };
+          // 3. A method called “assignTeachersSubject” that takes two
+          // arguments, the teacher’s id, a new subject.
+          // Assign the new subject to that particular teacher if that
+          // subject doesn’t exist in their array of subjects
+          school['assignTeachersSubject'] = function blah(id,subjy){
+            const teach = school.teachers.filter(i=>i.id===id);
+            console.log(teach);
+            console.log(teach[0].subjects);
+            teach[0].subjects.find(i=> i === subjy) ? null : teach[0].subjects.push(subjy);
+            console.log(teach);
+        };
+
+          // 4. Create a new method of anything you want.
+          school['leet'] = (id) => {
+            const stu = school.findPerson('students',id)[0].name;
+            console.log(`${stu} is a 1337!`);
+          };
+  </script>
+</body>
+</html>
