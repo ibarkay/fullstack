@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13.3 - compare the arrays</title>
+</head>
+<body>
+  
+
+  <script>
+    const food = ["Noodle", "Pasta", "Ice-cream", "Meat",
+                  "Cucumber", "Olives"];
+    const food1 = ["Fries", "Ice-cream", "Pizza", "Olives",
+                  "Hamburgers"];
+// Create a function that takes these two arrays as
+// arguments.
+// Compare these two arrays using 2 for loops and return the
+// items that are the same. If none are the same return false.
+
+    const compary = (arr1,arr2) => {
+      for (let i of arr1){
+        for (let j of arr2){
+          j === i ? console.log(j,i): false;
+        }
+      }
+    };
+    compary(food,food1);
+  </script>
+</body>
+</html>

@@ -6,11 +6,10 @@ const people = [
 
 people.forEach((person, index) => {
   console.log(person.name);
-  if (person.name === 'Wes'){
+  if (person.name === 'Wes') {
     console.warn('Dumb name');
   }
 });
-
 
 console.table(people);
 // Console Methods
@@ -30,7 +29,7 @@ console.table(people);
 // Some Setup Code
 
 function doctorize(name) {
-  console.count('running ')
+  console.count('running ');
   return `Dr. ${name}`;
 }
 
@@ -45,9 +44,8 @@ function go() {
 }
 
 const button = document.querySelector('.bigger');
-button.addEventListener('click', function(e) {
-  const newFontSize =
-    parseFloat(getComputedStyle(e.currentTarget).fontSize) + 1;
+button.addEventListener('click', (e) => {
+  const newFontSize = parseFloat(getComputedStyle(e.currentTarget).fontSize) + 1;
   e.currentTarget.style.fontSize = `${newFontSize}px`;
 });
 

@@ -207,9 +207,32 @@
     }
     
 
+    // reduce
+    console.clear();
 
+    function tallyNumbers(tally, cueerntTotal){
+      console.log(`cuurent tali is ${tally}`);
+      console.log(`cuurent totla is ${cueerntTotal}`);
+      console.log(`---------`);
+      // return tally + cureetTotal
+      return tally + cueerntTotal;
+    }
+    const allOreders = orderTotals.reduce(tallyNumbers,0);
     
+    // console.log(allOr);
 
+    function inventoryReduceer(totals,item){
+      console.log(`looping over ${item.type}`);
+      //incremnt type by 1
+      totals[item.type] = totals[item.type] + 1 || 1;
+      return totals;
+
+    }
+    const inventoryCounts  = inventory.reduce(inventoryReduceer,{})
+    console.log(inventoryCounts);
+
+    const totalInvertoryPrice = inventory.reduce((acc,item)=> acc + item.price, 0);
+    console.log(totalInvertoryPrice);
   </script>
 </body>
 

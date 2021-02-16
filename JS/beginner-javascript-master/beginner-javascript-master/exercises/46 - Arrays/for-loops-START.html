@@ -13,14 +13,51 @@
     const numbers = [2, 34, 3, 23, 42, 3, 1, 65, 364, 5, 645, 6];
 
     const name = 'Wes Bos';
+    const obj = {
+      name:'iftach',
+      age:36,
+      last_name: 'barkay',
+    };
 
     // For
+    for (let i=0;i<= 10; i++){
+      console.log(i);
+    }
 
     // For of
+    console.clear();
+    for (const letter of name){
+      console.log(letter);
+      
+    }
+    console.clear()
+    for (const number of numbers){
+      console.log(number);
 
-    // For in
+    }
+
+    // For in looping over keys of an object
+    console.clear()
+    for (const number in numbers){
+      console.log(number);
+
+    }
+    for (const prop in obj){
+      console.log(prop);
+    }
 
     // While Loop
+    let cool = true;
+    let i = 1;
+    while (cool) {
+      console.log('you are cool');
+      i++;
+      if(i === 100){
+        cool = false;
+      }
+    }
+
+    // do while
   </script>
 </body>
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12.1 - fun with reduce</title>
+</head>
+<body>
+  
+
+  <script>
+    const listy = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+// Write the following functions using the reduce built-in function.
+// 1. max
+// 2. sum of even numbers
+// 3. average
+    const max = (acc,cur) => cur > acc ?  cur : acc;
+    const sum = (acc,cur) => acc + cur;
+    const sumOfEven = (acc,curr) => {
+      // debugger;
+      if (curr % 2 === 0){
+        return acc + curr;
+      }else return acc;
+    } ;
+    
+    const maxy = listy.reduce(max,0)
+    const sumy = listy.reduce(sum,0)
+    const avgy = listy.reduce(sum,0) / listy.length;
+    const sumEvan = listy.reduce(sumOfEven,0);
+    console.log(maxy);
+    console.log(sumy);
+    console.log(avgy);
+    console.log(sumEvan);
+  </script>
+</body>
+</html>

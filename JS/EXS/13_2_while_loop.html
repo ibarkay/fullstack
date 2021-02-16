@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13.2 - while loop</title>
+</head>
+<body>
+  
+
+  <script>
+// 1. Recreate the challenge from the exercise 6.4-
+// looping_with_arrays ,but this time using a while loop.
+// 2. Reflect on what solution you like better for this task: the
+// for loop or the while loop?
+    let populations = [10,9,8,7];
+    const WorldPop = 7900000000;
+     function percentageOfWorld1(population) {
+           return WorldPop /(population * 100)  ;
+           }
+
+    
+    let max = populations.length;
+    let i = 0;
+    let percentages = [];
+    while (i<max){
+      percentages.push(percentageOfWorld1(populations[i]*1000000));
+      i++
+    }
+    console.log(percentages);
+
+  
+  </script>
+</body>
+</html>

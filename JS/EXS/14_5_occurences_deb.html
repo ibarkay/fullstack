@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14.5- debugging -occurences</title>
+</head>
+<body>
+  
+
+
+  <script>
+    function countOccurrences (str, char){
+      // debugger;
+        let counter = 0 ;
+        for ( let i = 0 ; i < str .length; i ++ ){
+        if ( str . charAt ( i ) === char ){
+        counter += 1 ;
+              }
+           }
+          return counter ;
+        }
+    countOccurrences ( "ini mini miny moe" , "n" );
+
+// What is wrong with this code?
+// 1. First find the line that contains the problem. Write it
+// down. ---- 19
+// 2. Which debug method did you use to find the bug? breakpoint debugger;
+// 3. Explain the bug in your own words. line 19 , counter syntex is wrong.
+// 4. Fix the code and submit it all.
+  </script>
+</body>
+</html>
