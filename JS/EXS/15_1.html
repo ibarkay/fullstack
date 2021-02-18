@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15.1 scop and hosting</title>
+</head>
+<body>
+  
+<script>
+//   Without running the code below, explain in your own words what the result
+// of each block of code will be and why.
+// If there are any faulty outputs, please write on how we can fix them
+
+
+function funcA() {
+      // cant log 'a' before declered - movinng to log after decclertion will fix that
+      console.log(foo());
+      var a = 1;
+      console.log(a);   
+      function foo() {
+      return 2;
+      }
+}
+funcA(); 
+
+// block 2
+console.log('---2---');
+var fullName = 'John Doe';
+var obj = {
+    fullName: 'Colin Ihrig',
+    prop: {
+    fullName: 'Aurelio De Rosa',
+    getFullName: function () {
+      return fullName;
+    }
+ }
+};
+// will log inside a prop declertion
+console.log(obj.prop.getFullName());
+// will log the var 'getFullname' and not the function
+
+var test = obj.prop.getFullName;
+console.log(test);
+
+// block 3
+function funcB() {
+ a = b = 0;
+ a++;
+ console.log('im 3! -fix me');
+ return a;
+}
+funcB();
+// making a global by deleting let declertion
+console.log(typeof a);
+console.log(typeof b);
+
+// block 4
+console.log('-----4-----');
+function funcC() {
+ console.log("1");
+}
+funcC();
+function funcC() {
+ console.log("2");
+}
+// function are decleared if the start if function "runs" function by declertion it will runs the other
+funcC();
+
+
+// block 5 
+console.log('-----5-----');
+function funcD1() {
+ d = 1;
+}
+funcD1();
+// d is is global so it will be logged
+console.log(d);
+function funcD2() {
+   e = 1;
+}
+funcD2();
+// e is a 
+console.log(e);
+
+// block 6
+function funcE() {
+ console.log("Value of f in local scope: ", f);
+}
+// no f var just yet .... no logiing
+console.log("Value of f in global scope: ", f);
+var f = 1;
+// func will run and log global "f" becuse function call's after declertion
+funcE();
+</script>
+
+  
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16.1 - closures</title>
+</head>
+<body>
+  
+
+  <script>
+    var b = 1;
+    // debugger;
+function someFunction(number) {
+ function otherFunction(input) {
+   
+ return b;
+ }
+ b = 5;
+ return otherFunction;
+}
+// returns function string -- saves the otherFunc as a var for the futer with the value of 5 in b
+var firstResult = someFunction(9);  
+// returns 5 -- use the otherFunc and returning all ready assain b=5 form "first call"
+var result = firstResult(2);
+console.clear();
+
+// block 2
+// debugger;
+let a = 1;
+function b2() {
+  a = 10;
+ return ;
+  function a() { }
+} 
+b2();
+console.log(a);
+// 1 - will be logged cuz "function a" will assian as "a" not the declertion a=blah.
+
+console.clear()
+// block 3
+// debugger;
+
+let i;
+console.log(i);
+// console.time('start')
+for ( let i = 0; i < 3; i++) { 
+  
+ const log = () => {
+//  console.log(i);
+ }
+ 
+ setTimeout(log,100);
+ 
+}
+console.log(i);
+// console.timeEnd('start')
+// the differnce between var and let , var = function-scope , let = "block-scope"
+  </script>
+</body>
+</html>

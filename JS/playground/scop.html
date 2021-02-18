@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./scope.js"></script>
+  <title>scope</title>
+</head>
+<body>
+  
+
+  <script>
+function greeting(greeting = ''){
+  const myGreet = greeting.toUpperCase();
+  return function(name){
+    return `${myGreet} ${name}`;
+  }
+}
+// creat a closer - function with vars that are not accsecsable out
+const sayHello = greeting('hello');
+const sayHi = greeting('hi');
+console.log(sayHello('iftach'));
+
+// console.log(greeting('hello'));
+  </script>
+</body>
+</html>
