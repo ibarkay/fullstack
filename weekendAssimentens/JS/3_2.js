@@ -10,3 +10,7 @@
 // Please keep in mind that the test cases ensure that the number of people in the bus is always
 // >= 0. So the return integer can't be negative.
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
+// debugger;
+const busPpl = (arrs) => arrs.reduce((bus, data) => bus + data[0] - data[1], 0);
+
+console.log(busPpl([[15, 0], [2, 2], [10, 20], [0, 0], [14, 12]]));

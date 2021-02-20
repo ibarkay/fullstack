@@ -15,11 +15,10 @@ const fibo = function (num) {
   arik = new Array();
   arik[0] = 0;
   arik[1] = 1;
-  // arik.reduce((a, c, index) => {});
-  console.log(arik);
   for (let i = 0; i < num; i++) {
     arik[i + 2] = arik[i] + arik[i + 1];
   }
-  console.log(arik);
+
+  return (arik.length > 2) ? arik : [];
 };
-fibo(11);
+console.log(fibo(0));

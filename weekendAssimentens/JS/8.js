@@ -9,3 +9,5 @@
 // ● Don't forget to return the result.
 // ● If you're stuck, find help in the Resources tab.
 // ● If you're really stuck, find solutions in the Solutions tab.
+const findPerimeter = (num1, num2) => (num1 + num2) * 2;
+console.log(findPerimeter(6, 7));

@@ -8,3 +8,16 @@
 // longest(a, b) -> "abcdefklmopqwxy"
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+const longest = (str1, str2) => {
+  const resObj = {};
+  const arr = (str1 + str2).toLowerCase().split('');
+  for (const char of arr) {
+    resObj[char] = null;
+  }
+  console.log(Object.keys(resObj).sort().join(''));
+};
+// test
+a = 'xyaabbbccccdefww';
+b = 'xxxxyyyyabklmopq';
+longest(a, b);

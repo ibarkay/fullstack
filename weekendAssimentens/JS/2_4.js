@@ -8,17 +8,9 @@ const results = {};
 
 function findUniq(arr) {
   arr.forEach((element) => {
-    // console.log(element);
     results[element] = (arr.join('').split(element)).length;
   });
-  console.log(Object.keys(results).reduce((acc, curr) => ((acc > curr) ? acc : curr)));
+  return Object.keys(results).reduce((acc, curr) => ((acc != curr) ? acc : curr));
 }
 
-// const findUniq = (arr) => arr.forEach((element) => {
-//   console.log(element);
-//   results[element] = (arr.join('').split(element)).length;
-//   // console.log(results);
-// });
-// console.log(results);
-
-findUniq([0, 0, 0.55, 0, 0]);
+console.log(findUniq([9, 9, 7, 9, 9]));
