@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shani class</title>
+</head>
+<body>
+  
+
+  <script>
+    class Node {
+      constructor(element){
+        this.element = element;
+        this.next = null;
+      }
+    }
+
+    class LinkedList {
+      constructor(){
+        this.head = null;
+        this.size =0;
+      }
+      isEmpthy(){
+        return this.size === 0;
+      }
+      addLast(element){
+        const node = new Node(element); //next = null
+        const current;
+        if (this.head === null){
+          this.head = node;
+        }
+        else {
+          current = this.head;
+          while(current.next){ //the "thing"
+            current = current.next;
+          }
+          current.next = node;
+        }
+        this.size++;
+      }
+    }
+
+    let linkedList = new  LinkedList();
+    linkedList.addLast(1);
+    
+  </script>
+</body>
+</html>

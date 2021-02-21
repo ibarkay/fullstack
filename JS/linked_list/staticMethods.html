@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calss's - static Methods</title>
+</head>
+<body>
+  
+
+  <script>
+    class Square {
+      constructor (_width){
+        this.width = _width;
+        this.heigth = _width;
+
+      } 
+      static euals (a,b){
+        return a.width * a.heigth === b.width * b.heigth ;
+      }
+      static isValidDimen(width,heigth){
+        return width === heigth;
+      }
+    }
+
+    let sqr1 = new Square(8);
+    let sqr2 = new Square(9);
+    console.log(Square.isValidDimen(6,5));
+
+  </script>
+</body>
+</html>
