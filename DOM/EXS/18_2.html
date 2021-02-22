@@ -10,9 +10,20 @@
 
   
   <script>
-    const myH1 = document.createElement('h1','Wellcome to JS created site.');
-    const myPar = document.createElement('p','this is the leet site created with only DOM js');
-    const myBtn = document.createElement();
+    const myH1 = document.createElement('h1');
+    myH1.innerText = 'wellcome to a JS DOM created site .'
+
+    const myPar = document.createElement('p');
+    myPar.innerText = 'this is the leet site created with only DOM js'
+    // const myStyle = document.createElement('style','body {background : black;}');
+    document.body.style.background = "black"
+    document.body.style.color = 'white'
+    
+    document.body.append(myH1);
+    document.body.append(myPar);
+
+
   </script>
+  
 </body>
 </html>
