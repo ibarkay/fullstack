@@ -15,6 +15,7 @@
 
 <script>
   const vars = [];
+  let count = 0;
   const myFirstDiv = document.querySelector("#myFirstDiv");
  const mySecondDiv = document.querySelector("#mySecondDiv");
  const myThirdDiv = document.querySelector("#myThirdDiv");
@@ -23,7 +24,7 @@
 const elms = document.querySelectorAll('div');
 const listy = Array.from(elms);
 for (let el in listy){
-  eval(`const elm${el} = '1';`);
+  vars.push('')
 }
 console.log(vars);
 </script>
