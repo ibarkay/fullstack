@@ -24,7 +24,8 @@ Limit the font size to be between 6px and 100px.
    const p = document.querySelector('p');
    const plus = document.querySelector('.plus');
    const minus = document.querySelector('.minus');
-   let size = 6;
+   let size = parseInt(window.getComputedStyle(p).fontSize);
+   console.log(size);
   //  TODO : 6-100 max-min
    plus.addEventListener('click',function(){size++;p.style = `font-size : ${size}px`});
    minus.addEventListener('click',function(){size--;p.style = `font-size : ${size}px`});
