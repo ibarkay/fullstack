@@ -17,7 +17,9 @@
     console.log(t);
     const btn  = document.querySelector('.btn');
     btn.addEventListener('click',function(){
-      console.log(t.textContent);
+      if (t.value.length < 100) {
+        alert("input should be 100+ chars, thanx.")
+      } else alert('ok');
     })
   </script>
 </body>
