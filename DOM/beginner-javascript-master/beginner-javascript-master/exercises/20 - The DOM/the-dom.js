@@ -20,3 +20,14 @@ function toggleAriund() {
   pic.classList.toggle('round');
 }
 pic.addEventListener('click', toggleAriund);
+
+pic.width = 200; // setters
+
+pic.setAttribute('alt', '1337!'); // set
+pic.addEventListener('load', () => {
+  console.log(pic.alt); // get
+});
+
+const pp = document.querySelectorAll('div');
+const costum = document.querySelector('.cus');
+console.log(costum.dataset.name);

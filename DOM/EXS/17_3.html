@@ -14,12 +14,18 @@
 
 
 <script>
+  const vars = [];
   const myFirstDiv = document.querySelector("#myFirstDiv");
  const mySecondDiv = document.querySelector("#mySecondDiv");
  const myThirdDiv = document.querySelector("#myThirdDiv");
  const myFourthDiv = document.querySelector("#myFourthDiv");
 //  my fix
 const elms = document.querySelectorAll('div');
+const listy = Array.from(elms);
+for (let el in listy){
+  vars[el] = listy[el];
+}
+console.log(vars);
 </script>
 </body>
 </html>

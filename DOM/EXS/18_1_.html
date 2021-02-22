@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18.1 - simley</title>
+</head>
+<body>
+  <h1>how many smileys do you want to see?</h1>
+  <input type="number" >
+  <button class="btn">click me!</button>
+  <h2></h2>
+
+  <script>
+    const input = document.querySelector('input');
+    const btn = document.querySelector('button');
+    const smiles = document.querySelector('h2');
+
+    btn.addEventListener('click',function(){
+      smiles.innerHTML = ':)'
+      smiles.innerHTML = `${smiles.innerHTML.repeat(input.value)}`;
+    })
+  </script>
+
+
+</body>
+</html>
