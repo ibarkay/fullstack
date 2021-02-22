@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17.1 - Font size changer</title>
+</head>
+<body>
+  <!-- Instructions
+Create a webpage that has some text and two buttons with ‘+’ and ‘-‘
+Clicking the ‘+’ button should increase the text’s font-size and clicking the ‘-‘
+should decrease it.
+Limit the font size to be between 6px and 100px.
+ -->
+ <p>iftach barkay is 1337!</p>
+ <button class="plus">+</button>
+ <button class="minus">-</button>
+
+ <script>
+   function changeFontSize(){
+     p.style('font-size','100')
+   }
+   const p = document.querySelector('p');
+   const plus = document.querySelector('.plus');
+   const minus = document.querySelector('.minus');
+   let size = 6;
+  //  TODO : 6-100 max-min
+   plus.addEventListener('click',function(){size++;p.style = `font-size : ${size}px`});
+   minus.addEventListener('click',function(){size--;p.style = `font-size : ${size}px`});
+
+ 
+
+ </script>
+
+
+</body>
+</html>
