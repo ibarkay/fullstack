@@ -13,14 +13,33 @@
     const myH1 = document.createElement('h1');
     myH1.innerText = 'wellcome to a JS DOM created site .'
 
+    const stylic = document.createElement('style');
+    document.body.append(stylic);
+    
+    
+    
+
     const myPar = document.createElement('p');
     myPar.innerText = 'this is the leet site created with only DOM js'
     // const myStyle = document.createElement('style','body {background : black;}');
-    document.body.style.background = "black"
-    document.body.style.color = 'white'
     
+    document.body.style.textAlign = 'center'
+
+
+    const myBtn = document.createElement('button');
+    myBtn.innerHTML = 'click me!';
+    let check = 1;
+
     document.body.append(myH1);
     document.body.append(myPar);
+    document.body.append(myBtn);
+    myBtn.addEventListener('click',function(){
+      check++;
+      if (check % 2  === 0){
+        stylic.innerHTML = 'body {background:black;color:white}'
+      }else stylic.innerHTML = 'body {background:white;color:black}'
+    })
+    // myH1.setAttribute('style','background:red')
 
 
   </script>
