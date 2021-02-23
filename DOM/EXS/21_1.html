@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21.1 -  user age</title>
+</head>
+<body>
+  
+  <!-- Instructions
+Create a webpage that has an input field for the user’s age and a button.
+If the user enters a number above 18, make the text “you can drink appear”.
+If the user enters a number below 18, make the text “you’re too young”
+appear. -->
+<input type="text" >
+<button>sumbit</button>
+<script>
+  const input = document.querySelector('input');
+  const btn = document.querySelector('button');
+  btn.addEventListener("click",()=> {
+    (parseInt(input.value) >= 18) ? input.value = 'you can drink appear' : input.value = 'you’re too young';
+  })
+</script>
+
+</body>
+</html>
