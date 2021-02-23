@@ -40,7 +40,7 @@ document.body.append(div)
 
 const createElemnety = function(element){
     const myHTML = `
-    <li>${element.firstName} ${element.lastName}</li>
+    <li data-id='${element.id}' >${element.firstName} ${element.lastName}</li>
     `
     return myHTML;
 };
@@ -51,10 +51,10 @@ users.forEach(element => {
 // 2
 div.style.listStyle = 'none'
 // 3
-const liys = document.querySelectorAll('li');
-liys.forEach((element,index) => {
-  element.setAttribute('data-id',index);
-});
+// const liys = document.querySelectorAll('li');
+// liys.forEach((element,index) => {
+//   element.setAttribute('data-id',index);
+// });
 
   </script>
 
