@@ -13,26 +13,49 @@
     .numbers {display: flex;justify-content: space-around;}
     input{width: 40px;height: 40px;margin-top: 40px;}
   </style>
-  <h1>text to copy: <br>123456</h1>
+  <h1>text to copy: <br><span class="pass">123456</span> </h1>
   <div class="main">
     <div class="numbers">
-      <input type="number" >
-      <input type="number" >
-      <input type="number" >
-      <input type="number" >
-      <input type="number" >
-      <input type="number" >
+      <input type="text" maxlength="1" >
+      <input type="text" maxlength="1" >
+      <input type="text" maxlength="1" >
+      <input type="text" maxlength="1" >
+      <input type="text" maxlength="1" >
+      <input type="text" maxlength="1" >
+      
     </div>
     <button>Verify</button>
   </div>
 
 
   <script>
+    const password = document.querySelector('span.pass');
+    const btn = document.querySelector('button');
+    btn.addEventListener('click',()=>{
+      let passcode = inputs.map(x =>x.value).join('');
+      (password.innerHTML === passcode) ? alert('OK') : alert('no');
+      for (let inp of inputs){
+        location.reload();
+      }
+      
+
+    })
       let target = document.querySelector('input');
       let inputs = Array.from(document.querySelector('div.numbers').children);
-      const isValid = (currentValue) => currentValue.value ;
+      const isValid = (currentValue) => currentValue.value;
       
-      
+      for (let elem of inputs){
+        elem.addEventListener('keydown',(event)=>{
+          console.log(event.key);
+          if (parseInt(event.key)){
+            elem.value = event.key;
+            if (inputs[inputs.indexOf(elem)+1]){
+              inputs[inputs.indexOf(elem)+1].focus();
+            } else btn.click();
+          }else alert('only numbers plz!')
+        })
+      }
+
 
     target.addEventListener('paste', (event) => {
     let paste = (event.clipboardData ).getData('text');
@@ -42,18 +65,14 @@
       target.value =parseInt(paste[i]);
       target = target.nextElementSibling;
     }
-//     1. The user is allowed to type the values manually. After
-// each value is inserted, the next input will be focused.
-// 2. The user is allowed to paste the verification code.
-// 3. An extra challenge will be to auto submit the form once
-// all inputs all populated.
     event.preventDefault();
+  
     
-    if (inputs.every(isValid)){
-      console.log('All full + button clicked');
-    }
+    
+    // compare
     
 });
+    
   </script>
 
 </body>
