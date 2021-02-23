@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21.3 - forEachDOM</title>
+</head>
+<body>
+  <script>
+    const users = [
+                  {
+                  id: 167464,
+                  firstName: "Jimmy",
+                  lastName: "Arnold",
+                  email: "jimmya@gmail.com",
+                  },
+                  {
+                  id: 578447,
+                  firstName: "Martha",
+                  lastName: "Goldman",
+                  email: "gold@hotmail.com",
+                  },
+                  {
+                  id: 864578,
+                  firstName: "Tim",
+                  lastName: "Burton",
+                  email: "timmy.hotmail.com",
+                  },
+                  ];
+// 1. Loop over the array with the forEach method and dynamically
+// create an ordered list of the first and last names from the objects.
+// 2. Remove the bullet points of the ordered list with javaScript.
+// 3. Create a custom data attribute called “data-id” and attach the id
+// value to each li.
+
+// 1
+const div = document.createElement('ul');
+document.body.append(div)
+
+const createElemnety = function(element){
+    const myHTML = `
+    <li>${element.firstName} ${element.lastName}</li>
+    `
+    return myHTML;
+};
+users.forEach(element => {
+  let item = createElemnety(element)
+  div.innerHTML += item ;
+});
+// 2
+div.style.listStyle = 'none'
+// 3
+const liys = document.querySelectorAll('li');
+liys.forEach((element,index) => {
+  element.setAttribute('data-id',index);
+});
+
+  </script>
+
+</body>
+</html>
