@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web page</title>
+</head>
+<body>
+    <script>
+        document.body.style.backgroundColor = '#333';
+        document.body.style.margin = '0';
+        document.body.style.padding = '0';
+        document.body.style.color = '#eee';
+        document.body.style.width = '100vw';
+        document.body.style.height = '100vh';
+        document.body.style.cursor = 'pointer'
+        document.body.style.transition = '0.3s ease-in-out'
+
+        let header = document.createElement('h1')
+        header.style.padding = '2rem';
+        header.style.margin = '0';
+        header.style.textAlign = 'center'
+        header.style.position = 'relative'
+        header.style.top = '50%'
+        header.style.left = '50%'
+        header.style.transform = 'translate(-50%,-50%)'
+        header.style.border = '1px solid black'
+        header.style.textShadow = '0 0 5px black'
+        header.style.textTransform = 'uppercase'
+        header.contentEditable = true
+        header.style.fontFamily = '-apple-system, BlinkMacSystemFont, Segoe UI'
+        header.style.cursor = 'pointer'
+        header.style.transition = '.6s ease-in-out'
+
+        document.body.appendChild(header).innerHTML = `Click on the keyboard or mouse to see the magic happen!<br>or try to edit this text....`
+        document.body.addEventListener('keydown', () => {
+            let randomColor = Math.floor(Math.random() * colors.length)
+            let randomColor1 = Math.floor(Math.random() * colors.length)
+            let randomColor2 = Math.floor(Math.random() * colors.length)
+            header.style.backgroundColor = colors[randomColor1]
+            header.style.color = colors[randomColor2]
+            document.body.style.backgroundColor = colors[randomColor]
+            document.body.style.cursor = cursorsss[Math.floor(Math.random() * cursorsss.length)]
+
+        })
+        document.body.addEventListener('click', () => {
+            let randomColor = Math.floor(Math.random() * colors.length)
+            let randomColor1 = Math.floor(Math.random() * colors.length)
+            let randomColor2 = Math.floor(Math.random() * colors.length)
+            header.style.backgroundColor = colors[randomColor1]
+            header.style.color = colors[randomColor2]
+            document.body.style.backgroundColor = colors[randomColor]
+            document.body.style.cursor = cursorsss[Math.floor(Math.random() * cursorsss.length)]
+
+        })
+        let colors = [
+            "AliceBlue",
+            "AntiqueWhite",
+            "Aqua",
+            "Aquamarine",
+            "Azure",
+            "Beige",
+            "Bisque",
+            "Black",
+            "BlanchedAlmond",
+            "Blue",
+            "BlueViolet",
+            "Brown",
+            "BurlyWood",
+            "CadetBlue",
+            "Chartreuse",
+            "Chocolate",
+            "Coral",
+            "CornflowerBlue",
+            "Cornsilk",
+            "Crimson",
+            "Cyan",
+            "DarkBlue",
+            "DarkCyan",
+            "DarkGoldenRod",
+            "DarkGray",
+            "DarkGrey",
+            "DarkGreen",
+            "DarkKhaki",
+            "DarkMagenta",
+            "DarkOliveGreen",
+            "DarkOrange",
+            "DarkOrchid",
+            "DarkRed",
+            "DarkSalmon",
+            "DarkSeaGreen",
+            "DarkSlateBlue",
+            "DarkSlateGray",
+            "DarkSlateGrey",
+            "DarkTurquoise",
+            "DarkViolet",
+            "DeepPink",
+            "DeepSkyBlue",
+            "DimGray",
+            "DimGrey",
+            "DodgerBlue",
+            "FireBrick",
+            "FloralWhite",
+            "ForestGreen",
+            "Fuchsia",
+            "Gainsboro",
+            "GhostWhite",
+            "Gold",
+            "GoldenRod",
+            "Gray",
+            "Grey",
+            "Green",
+            "GreenYellow",
+            "HoneyDew",
+            "HotPink",
+            "IndianRed",
+            "Indigo",
+            "Ivory",
+            "Khaki",
+            "Lavender",
+            "LavenderBlush",
+            "LawnGreen",
+            "LemonChiffon",
+            "LightBlue",
+            "LightCoral",
+            "LightCyan",
+            "LightGoldenRodYellow",
+            "LightGray",
+            "LightGrey",
+            "LightGreen",
+            "LightPink",
+            "LightSalmon",
+            "LightSeaGreen",
+            "LightSkyBlue",
+            "LightSlateGray",
+            "LightSlateGrey",
+            "LightSteelBlue",
+            "LightYellow",
+            "Lime",
+            "LimeGreen",
+            "Linen",
+            "Magenta",
+            "Maroon",
+            "MediumAquaMarine",
+            "MediumBlue",
+            "MediumOrchid",
+            "MediumPurple",
+            "MediumSeaGreen",
+            "MediumSlateBlue",
+            "MediumSpringGreen",
+            "MediumTurquoise",
+            "MediumVioletRed",
+            "MidnightBlue",
+            "MintCream",
+            "MistyRose",
+            "Moccasin",
+            "NavajoWhite",
+            "Navy",
+            "OldLace",
+            "Olive",
+            "OliveDrab",
+            "Orange",
+            "OrangeRed",
+            "Orchid",
+            "PaleGoldenRod",
+            "PaleGreen",
+            "PaleTurquoise",
+            "PaleVioletRed",
+            "PapayaWhip",
+            "PeachPuff",
+            "Peru",
+            "Pink",
+            "Plum",
+            "PowderBlue",
+            "Purple",
+            "RebeccaPurple",
+            "Red",
+            "RosyBrown",
+            "RoyalBlue",
+            "SaddleBrown",
+            "Salmon",
+            "SandyBrown",
+            "SeaGreen",
+            "SeaShell",
+            "Sienna",
+            "Silver",
+            "SkyBlue",
+            "SlateBlue",
+            "SlateGray",
+            "SlateGrey",
+            "Snow",
+            "SpringGreen",
+            "SteelBlue",
+            "Tan",
+            "Teal",
+            "Thistle",
+            "Tomato",
+            "Turquoise",
+            "Violet",
+            "Wheat",
+            "White",
+            "WhiteSmoke",
+            "Yellow",
+            "YellowGreen",
+            ];
+            let cursorsss = ["alias",
+                            "all-scroll",
+                            "auto",
+                            "cell",
+                            "context-menu",
+                            "col-resize",
+                            "copy",
+                            "crosshair",
+                            "default",
+                            "e-resize",
+                            "ew-resize",
+                            "grab",
+                            "grabbing",
+                            "help",
+                            "move",
+                            "n-resize",
+                            "ne-resize",
+                            "nesw-resize",
+                            "ns-resize",
+                            "nw-resize",
+                            "nwse-resize",
+                            "no-drop",
+                            "none",
+                            "not-allowed",
+                            "pointer",
+                            "progress",
+                            "row-resize",
+                            "s-resize",
+                            "se-resize",
+                            "sw-resize",
+                            "text",
+                            "url(myBall.cur),auto",
+                            "w-resize",
+                            "wait",
+                            "zoom-in",
+                            "zoom-out"];
+    </script>
+</body>
+</html>

@@ -24,9 +24,12 @@
 const elms = document.querySelectorAll('div');
 const listy = Array.from(elms);
 for (let el in listy){
-  vars.push('')
+  console.log(el,listy[el]);
+  // ugly but its work's
+  eval(`var iftach${el} = '${listy[el].outerHTML}'`);
 }
-console.log(vars);
+// now you have :
+// iftach0,iftach1,iftach2,iftach3 as vars.
 </script>
 </body>
 </html>
