@@ -59,18 +59,11 @@
 
     target.addEventListener('paste', (event) => {
     let paste = (event.clipboardData ).getData('text');
-    
-
     for (let i in paste){
       target.value =parseInt(paste[i]);
       target = target.nextElementSibling;
     }
     event.preventDefault();
-  
-    
-    
-    // compare
-    
 });
     
   </script>
