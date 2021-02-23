@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19.2 - Multiple inputs copy</title>
+</head>
+<body>
+  <style>
+    body {text-align: center;display: flex;justify-content: center;flex-direction: column;align-items: center;}
+    .main {width: 500px;height: 300px;border: 1px black solid;display: flex;flex-direction: column;justify-content: space-around;}
+    .numbers {display: flex;justify-content: space-around;}
+    input{width: 40px;height: 40px;margin-top: 40px;}
+  </style>
+  <h1>text to copy: <br>123456</h1>
+  <div class="main">
+    <div class="numbers">
+      <input type="number" >
+      <input type="number" >
+      <input type="number" >
+      <input type="number" >
+      <input type="number" >
+      <input type="number" >
+    </div>
+    <button>Verify</button>
+  </div>
+
+
+  <script>
+      let target = document.querySelector('input');
+      let inputs = Array.from(document.querySelector('div.numbers').children);
+      const isValid = (currentValue) => currentValue.value ;
+      
+      
+
+    target.addEventListener('paste', (event) => {
+    let paste = (event.clipboardData ).getData('text');
+    
+
+    for (let i in paste){
+      target.value =parseInt(paste[i]);
+      target = target.nextElementSibling;
+    }
+//     1. The user is allowed to type the values manually. After
+// each value is inserted, the next input will be focused.
+// 2. The user is allowed to paste the verification code.
+// 3. An extra challenge will be to auto submit the form once
+// all inputs all populated.
+    event.preventDefault();
+    
+    if (inputs.every(isValid)){
+      console.log('All full + button clicked');
+    }
+    
+});
+  </script>
+
+</body>
+</html>
