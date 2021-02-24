@@ -50,6 +50,11 @@ anymore keys until he confirms. -->
   <h2 class="result">none</h2>
   <h2>Keys guessed</h2>
   <h3 class="gusess"></h3>
+  <div class="hidde" style="display: none;">
+    <h3 >Wanna play agian ?</h3>
+    <button class="play">play!</button>
+  </div>
+
 
   <script>
     const curectLetter = 'i';
@@ -58,16 +63,21 @@ anymore keys until he confirms. -->
     const guesses = document.querySelector('h3.gusess');
     const resultToUser  = document.querySelector('h2.result');
     const box = document.querySelector('div.box');
+    const agian = document.querySelector('.hidde');
+    const playBtn = document.querySelector('.play');
+    const start = ()=>{docy.addEventListener('keydown',validy);};
+    const stop = ()=>{docy.removeEventListener('keydown',validy);};
 
-    docy.addEventListener('keydown',function(e){
-      // true;
+
+    start();
+    function validy(e){
       if (e.key === curectLetter){
         console.log('true that');
         resultToUser.style.color = 'green'
         resultToUser.innerHTML = "Ture! you Win."
         box.innerHTML = curectLetter;
-
-        (confirm('Play agian ?')) ? location.reload():location.reload(); 
+        agian.style.display = '';
+        stop();
 
       }else {
         // false
@@ -79,9 +89,11 @@ anymore keys until he confirms. -->
         }else{
           alert(`${e.key} is allready been clicked , or its not a letter.`);
         }
-
-      }
-    })
+    }};
+    playBtn.addEventListener('click',function(){
+      location.reload();
+    });
+    
   </script>
 </div>
 </body>
