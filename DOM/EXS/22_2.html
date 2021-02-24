@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>22.2 - chekbox</title>
+</head>
+<body>
+  <!-- Instructions
+Create a webpage that has a checkbox. If the checkbox is checked, make a
+photo appear. If it is not, make it disappear. -->
+<label for="chek">Check to see Photo</label>
+<input type="checkbox" name="chek" id="chek">
+<img src="https://picsum.photos/200" style="display: none;" salt="photo" srcset="">
+
+
+<script>
+  const checky = document.querySelector('#chek')
+  const img = document.querySelector('img');
+  checky.addEventListener('click',function(e){
+    if (checky.checked){
+      img.style.display = ''
+    }else{
+      img.style.display = 'none'
+    }
+  });
+</script>
+</body>
+</html>

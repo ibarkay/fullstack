@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>22.3 - gues my letter</title>
+</head>
+<body>
+  <!-- The game
+Lets create a small game that the user needs to guess a random
+letter. Do not spend too much time styling the page.
+Here is a small demo of what you need to accomplish.
+Instructions:
+Generate a random letter and create the following logic depending
+if the user guessed the right letter or not:
+User guessed it right
+• Display a message that the user was right.
+• The message should be in the color green.
+• Show the right letter to the user.
+• Display a message if he wants to play again with a confirm
+button.
+• If the user wants to play again reset the DOM as it was in the
+beginning.
+
+
+User guessed wrong
+• Display a message that the user got it wrong.
+• The message should be in the color red.
+• Display all the letters the user has guessed
+• User cannot type the same letter twice. If the user did so,
+display a message that he already guessed the letter.
+Constraints
+• A user can only guess a valid alphabetical letter. If the user
+types a non alphabetical letter, display a message that this is
+not allowed.
+• When the game is finished, a user cannot guess a letter until
+he presses the confirm button to start a new game.
+• show guesses
+• If letter already guessed message to them
+• If letter is not the guess then display a message wrong guess
+• If letter is you are correct message and display the righ right
+key then show an option to start the game again.
+• When asking for a new game, user is not able to enter
+anymore keys until he confirms. -->
+
+<div class="container" style="text-align: center; display: flex; flex-direction: column;align-items: center;">
+  <h1>Wellcome to Guess the letter</h1>
+  <div class="box" style="border: 1px black solid;width: 50px; height: 50px;">?</div>
+  <h2 class="result">none</h2>
+  <h2>Keys guessed</h2>
+  <h3 class="gusess"></h3>
+
+  <script>
+    const curectLetter = 'i';
+    let trys = [];
+    const docy = document.querySelector('body');
+    const guesses = document.querySelector('h3.gusess');
+    const resultToUser  = document.querySelector('h2.result');
+    const box = document.querySelector('div.box');
+
+    docy.addEventListener('keydown',function(e){
+      // true;
+      if (e.key === curectLetter){
+        console.log('true that');
+        resultToUser.style.color = 'green'
+        resultToUser.innerHTML = "Ture! you Win."
+        box.innerHTML = curectLetter;
+
+        (confirm('Play agian ?')) ? location.reload():location.reload(); 
+
+      }else {
+        // false
+        if (!trys.includes(e.key) && e.key.match(/[a-zA-z]/)){
+          trys.push(e.key)
+          resultToUser.style.color = 'red'
+          resultToUser.innerHTML = "False! you loss."
+          guesses.innerHTML= trys.join(',');
+        }else{
+          alert(`${e.key} is allready been clicked , or its not a letter.`);
+        }
+
+      }
+    })
+  </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>22.1 - forms</title>
+</head>
+<body>
+  <!-- Instructions
+Create a webpage that has a form (asks the user for its name, age and email
+address) and when the user clicks submit, open a text window that writes all
+the information and ask for his confirmation. If he clicks on the confirm
+button, tell him “congratulations you successfully sent this form” if he clicks on
+change information, give him the possibility to change the information and ask
+again for his confirmation. -->
+<div class="container" style="display: flex;flex-direction: column; width: 200px;height: 200px;" >
+  <form action="#" >
+    <input type="text" name="name" id="name" placeholder="name">
+    <input type="email" name="email" id="email" placeholder="email">
+    <input type="number" name="age" id="age" placeholder="age">
+    <button type="submit">submit</button>
+  </form>
+</div>
+
+
+<script>
+  const formy = document.querySelector('form');
+  const btn = document.querySelector('button');
+
+  btn.addEventListener('click',function (e){
+    e.preventDefault()
+    const conf = confirm(`is this Data valid ?\n${formy.name.value}\n${formy.age.value}\n${formy.email.value}`)
+    if (conf) {
+      alert('congratulations you successfully sent this form');
+    } else {
+      formy.reset() //working.
+    }
+    
+  });
+</script>
+</body>
+</html>
