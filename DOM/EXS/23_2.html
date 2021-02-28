@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>23.2 - stop watch</title>
+</head>
+<body>
+  <!-- Instructions
+Create a web page that has a stopwatch with a start and stop button.
+• The stop watch should have milliseconds, seconds and minutes.
+• When you click on the start button for the first time, the timer will start
+running (from 00:00:00 to 60:00:00 minutes)
+• When you click on the stop button, it will freeze the time that elapsed
+from the start.
+• When you click start again it will continue counting the time, from
+where it stopped. -->
+<h1 class="timer">00:00:00</h1>
+<button class="start">start</button>
+<button class="stop">stop</button>
+
+
+<script>
+  // globals
+  const timer = document.querySelector('.timer');
+  const start = document.querySelector('.start');
+  const stopy = document.querySelector('.stop');
+  let millisecondsCount = 0;
+  let secondes = 0;
+  let minutes = 0;
+  let stopTheTime = false;
+  // functions
+  function myTime (){
+       millisecondsCount++;
+       if (millisecondsCount === 100){
+         secondes++;
+         millisecondsCount = 0
+       }
+       if (secondes === 60){
+         secondes = 0;
+         minutes++;
+         
+       }
+       if (minutes === 60) {
+         //clear interval
+       }
+      //  str1.padStart(2, '0')
+       timer.innerHTML = (`${minutes.toString().padStart(2,0)}:${Math.floor(secondes).toString().padStart(2,'0')}:${millisecondsCount}`);
+    }
+
+  const startTimer = ()=> {
+    const startFromNow = new Date();
+    let inter =  setInterval(myTime,10)
+    if (stopTheTime){
+      clearInterval(inter);
+    }
+  };
+
+  
+  const stopTime = ()=> {
+    stopTheTime = true;
+    console.log('clicked');
+  };
+  
+  start.addEventListener('click',startTimer);
+  stopy.addEventListener('click',stopTime)
+</script>
+</body>
+</html>

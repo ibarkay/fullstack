@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tick</title>
+</head>
+<body>
+  <!-- Instructions
+Create a webpage that has a ticking clock with the hours, minutes and
+seconds.  -->
+<!-- TODO : only numbers plz! -->
+<h1 style="text-align: center;"></h1>
+
+<script>
+
+  let mm = new Date();
+  const timer = document.querySelector('h1');
+  setInterval(function(){
+    mm = new Date();
+    timer.innerHTML = mm.toUTCString();
+  })
+</script>
+</body>
+</html>

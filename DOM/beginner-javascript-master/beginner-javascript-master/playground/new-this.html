@@ -9,7 +9,33 @@
 </head>
 
 <body>
+  <button class="one">btn1</button>
+  <button class="tow">btn2</button>
+  <button class="tree">btn1</button>
+<script>
+  const myDate = new Date('agust 11, 2021');
 
+  const names = ['iftach','gali'];
+
+  function Pizza(){
+    console.log('making a pizza ');
+  }
+  const peperoniPizza = new Pizza();
+  console.log(peperoniPizza);
+  console.clear()
+
+  const btn1 = document.querySelector('.one')
+  const btn2 = document.querySelector('.tow')
+  const btn3 = document.querySelector('.tree')
+
+  function tell(){
+    console.log(this);
+  }
+
+  btn1.addEventListener('click',tell)
+  btn2.addEventListener('click',tell)
+
+</script>
 </body>
 
 </html>
