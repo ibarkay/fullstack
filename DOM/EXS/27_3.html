@@ -17,10 +17,12 @@ Extra
 prototypes -->
 
   <script>
-    Array.prototype.filter2 = function (filt) { //TODO : callback !
-    ret = [];
+    Array.prototype.filter2 = function (cb) { //TODO : callback !
+    let ret = [];
     for (let i = 0; i < this.length; i++) {
-      (this[i] === filt) ? ret.push(this[i]) : null;
+      if (cb(this[i])){
+        ret.push(this[i])
+      }
   }
     return ret;
 }
