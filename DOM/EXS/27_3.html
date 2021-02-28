@@ -34,12 +34,12 @@ prototypes -->
   }
 }
     const sumReducer = (initialValue, current) => initialValue + current;
-    Array.prototype.reduce2 = function (reducer, initialValue = 0) {
+    Array.prototype.reduce2 = function (cb, initialValue = 0) {
     let value = initialValue;
 
     for(let i = 0; i < this.length; i++) {
       let currentValue = this[i]
-      value = reducer(value, currentValue)
+      value = cb(value, currentValue)
     }
 
   return value;
