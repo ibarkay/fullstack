@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>27.3 - owen methods</title>
+</head>
+<body>
+  
+
+  <!-- Instructions
+1. Build your own filter method with the help of prototypes
+2. Build your own find method with the help of prototypes
+Extra
+3. Build your own reduce method with the help of
+prototypes -->
+
+  <script>
+    Array.prototype.filter2 = function (filt) { //TODO : callback !
+    ret = [];
+    for (let i = 0; i < this.length; i++) {
+      (this[i] === filt) ? ret.push(this[i]) : null;
+  }
+    return ret;
+}
+    Array.prototype.find2 = function (cb) {
+    for (let i = 0; i < this.length; i++) {
+      if(cb(this[i])){
+        return this[i];
+      }
+  }
+}
+    const sumReducer = (initialValue, current) => initialValue + current;
+    Array.prototype.reduce2 = function (reducer, initialValue = 0) {
+    let value = initialValue;
+
+    for(let i = 0; i < this.length; i++) {
+      let currentValue = this[i]
+      value = reducer(value, currentValue)
+    }
+
+  return value;
+}
+
+
+  </script>
+</body>
+</html>
