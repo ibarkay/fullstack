@@ -10,7 +10,36 @@
 
 <body>
   <script>
+    function makePizza(toppongs = []){
+      return pizzaPromise = new Promise(function(resolve,reject){
+        const timeTobake = 500 + (toppongs.length * 200)
+        // when ready tou can resolve
+        setTimeout(function(){
+          resolve(`here is your pizza  whit tthe topings ${toppongs.join('')}`);
 
+        },timeTobake)
+        // if something went wrong , we can reject
+
+      });
+      
+    }
+
+    makePizza(['peperoni'])
+    .then(function(pizza){
+      console.log(pizza);
+      return makePizza(['cheese','cheese','cheese','cheese']);
+    }).then(function(pizza){
+      console.log(pizza);
+      return makePizza(['fish'])
+    }).then(function(pizza){
+      console.log(pizza);
+    });
+    
+    // run them Concurrently
+    const pizzaPromise1 = makePizza(['cheese','cheese','cheese','cheese']);
+    const pizzaPromise2 = makePizza(['cheese','cheese']);
+
+    
   </script>
 </body>
 

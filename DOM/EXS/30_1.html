@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30.1 - Promise's</title>
+</head>
+<body>
+  <!-- function makePizza(toppongs = []){
+    return pizzaPromise = new Promise(function(resolve,reject){
+      const timeTobake = 500 + (toppongs.length * 200)
+      // when ready tou can resolve
+      setTimeout(function(){
+        resolve(`here is your pizza  whit tthe topings ${toppongs.join('')}`);
+
+      },timeTobake)
+      // if something went wrong , we can reject
+
+    });
+    
+  } -->
+  
+<!-- 
+  Instructions
+Write a function that takes a number as an argument and returns a Promise
+that tests if the value is less than or greater than the value 10.
+If it is greater than 10 it is resolved, if it is less than 10 it is rejected.
+Call the function and print the resolve and reject in a .then, .catch. -->
+
+<script>
+  function gratherThen10(num){
+    return GratherThen = new Promise(function(resolve,reject){
+      if (num > 10){
+        resolve('number is bigger then 10')
+      }else{
+        reject('number is smaller then 10')
+      }
+    })
+  }
+
+  const print = gratherThen10(11).then(function(s){
+    console.log(s,'---then');
+  }).catch(function(s){
+    console.log(s,'---catch');
+  });
+ 
+  
+</script>
+</body>
+</html>
