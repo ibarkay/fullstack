@@ -30,7 +30,7 @@ Call the function and print the resolve and reject in a .then, .catch. -->
 
 <script>
   function gratherThen10(num){
-    return GratherThen = new Promise(function(resolve,reject){
+    return GratherThen = new Promise(function(resolve,reject   ){
       if (num > 10){
         resolve('number is bigger then 10')
       }else{
@@ -39,7 +39,7 @@ Call the function and print the resolve and reject in a .then, .catch. -->
     })
   }
 
-  const print = gratherThen10(11).then(function(s){
+   gratherThen10(11).then(function(s){
     console.log(s,'---then');
   }).catch(function(s){
     console.log(s,'---catch');

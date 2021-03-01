@@ -25,6 +25,16 @@ target.addEventListener('paste', (event) => {
 
     event.preventDefault();
 });
+
+const greaterThan10 = (num) =>
+  new Promise((num) => (resolve, reject) =>
+    num < 10
+      ? reject(`number is smalle;r than 10`)
+      : resolve(`number is bigger than 10`)
+  )
+    .then((ans) => console.log(ans))
+    .catch((ans) => console.log(ans));
+    
 </script>
 </body>
 </html>

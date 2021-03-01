@@ -24,29 +24,33 @@ in a .then, .catch. -->
       if (arrOfWords.every((x)=> typeof x === 'string')){
         resolved(arrOfWords.map((x)=> x.toUpperCase()))
       }
-      reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
+      reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr from make');
     })
 
   };
   const sortWords = function(arrOfWords){
     return sorted = new Promise(function(resolved,reject){
-      if (arrOfWords.every((x)=> typeof x === 'string')){
         resolved(arrOfWords.sort())
-      }
-      reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
+        reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr from sort');
     })
   }
 
   const listy = ['iftach','gali','yaar'];
   const listy2 = [1,'iftach','gali','yaar'];
   // call's
-  const cally = Promise.all([sortWords(listy),makeAllCaps(listy)])
-    .then((s)=> console.log(s))
-    .catch((s)=> console.log(s));
-  const cally2 = Promise.all([sortWords(listy2),makeAllCaps(listy2)])
-    .then((s)=> console.log(s))
-    .catch((s)=> console.log(s));
-
+  
+  const call = makeAllCaps(listy)
+  .then(function(s){
+    sortWords(s).then(function(a){
+      console.log(a);
+    })
+  });
+  const call2 = makeAllCaps(listy2)
+  .then(function(s){
+    sortWords(s).then(function(a){
+      console.log(a);
+    })
+  });
 </script>
 
 </body>
