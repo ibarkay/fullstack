@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>28.1 - – who is stronger</title>
+</head>
+<body>
+  
+
+  <!-- Instructions
+1. What is wrong with the code? explain in your own words
+2. Fix the code so that invoking the whoIsStronger function
+will print "I am stronger".
+note: you cannot change the 'hero' or the whoIsStronger
+function. -->
+<script>
+  const hero = {
+        health: 5,
+        power: 68,
+        getStrength: function(){
+        if (this.health <= 5){
+        return this.power - 10;
+        } else return this.power;
+        }
+}
+function whoIsStronger(getStrength){
+        const myStrength = 82;
+        if (getStrength() < myStrength){
+        return "I am stronger";
+        } else return "You are stronger";
+}
+
+whoIsStronger(hero.getStrength.bind(hero));
+</script>
+</body>
+</html>

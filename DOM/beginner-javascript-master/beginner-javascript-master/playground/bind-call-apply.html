@@ -9,7 +9,45 @@
 </head>
 
 <body>
+  <script>
+    const person = {
+      name : 'iftach',
+      sayHi  (){
+        console.log(`hi ${this.name}`);
+        return `hi ${this.name}`;
+      }
+    }
+    const jenna = {name : 'jenna'};
 
+    const sayHi = person.sayHi.bind(jenna);
+
+    // QS example
+    // const $ = document.querySelector;
+
+
+    const bill = {
+      total : 1000,
+      calc : function (tax){
+        return this.total + (this.total * tax);
+      },
+      describe :function (mealType){
+        console.log(`you meal of ${mealType} `);
+      }
+    }
+
+    const total = bill.calc(0.17);
+    const calcy = bill.calc.bind({total :500},0.06);
+    
+    // call 
+    const total2 = bill.calc.call({total :500},0.06);
+    console.log(total2);
+    
+    // apply
+    const total3 = bill.calc.apply({total :500},[0.66]);
+    console.log(total3);
+
+    const myMeal = bill.describe.call(bill,'none')
+  </script>
 </body>
 
 </html>
