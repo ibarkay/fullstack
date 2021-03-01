@@ -44,12 +44,16 @@ in a .then, .catch. -->
     sortWords(s).then(function(a){
       console.log(a);
     })
+  }).catch(function(s){
+    console.log(s);
   });
   const call2 = makeAllCaps(listy2)
   .then(function(s){
     sortWords(s).then(function(a){
       console.log(a);
     })
+  }).catch(function(s){
+    console.log(s);
   });
 </script>
 
