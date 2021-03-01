@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30.2 - Promise chain</title>
+</head>
+<body>
+  
+
+  <!-- Instructions
+Write two functions that use Promises that you can chain.
+The first function, makeAllCaps(), will take in an array of words and capitalize
+them, and then the second function, sortWords(), will sort the words in
+alphabetical order. If the array contains anything but strings, it should throw
+an error.
+Call the functions once with an array of words and call it once with an array
+that includes at least one item that is not a word. Print the resolve and reject
+in a .then, .catch. -->
+<script>
+  const makeAllCaps= function(arrOfWords){
+    return allCaps = new Promise(function(resolved,reject){
+      if (arrOfWords.every((x)=> typeof x === 'string')){
+        resolved(arrOfWords.map((x)=> x.toUpperCase()))
+      }
+      reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
+    })
+
+  };
+  const sortWords = function(arrOfWords){
+    return sorted = new Promise(function(resolved,reject){
+      if (arrOfWords.every((x)=> typeof x === 'string')){
+        resolved(arrOfWords.sort())
+      }
+      reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
+    })
+  }
+
+  const listy = ['iftach','gali','yaar'];
+  const listy2 = [1,'iftach','gali','yaar'];
+  // call's
+  const cally = Promise.all([sortWords(listy),makeAllCaps(listy)]).then((s)=> console.log(s)).catch((s)=> console.log(s));
+  const cally2 = Promise.all([sortWords(listy2),makeAllCaps(listy2)]).then((s)=> console.log(s)).catch((s)=> console.log(s));
+
+</script>
+
+</body>
+</html>
