@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>APIs</title>
+		<link rel="stylesheet" href="../base.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>APIs</title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+	<body>
+		<p class="user"></p>
 
-<body>
-  <script>
+		<script>
+			const usery = document.querySelector(".user");
+			const baseEndPoint = "https://api.gidsadthub.com";
+			const usersEndPoint = `${baseEndPoint}/users`;
 
-  </script>
-</body>
+			async function displayUser(username) {
+				usery.innerHTML = "🧓  loading ... ";
+				const response = await fetch(`${usersEndPoint}/${username}`);  //
+				const data = await response.json(); //
+				usery.innerHTML = `${data.login}  🏊 `;
+			}
 
+			function handeError(err) {
+				console.log(err);
+        usery.innerHTML = `⛔ somthing went wrong ↔  ${err}`
+			}
+			displayUser('ibarkay').catch(handeError);
+		</script>
+	</body>
 </html>

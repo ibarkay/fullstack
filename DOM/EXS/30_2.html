@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>30.2 - Promise chain</title>
-</head>
-<body>
-  
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>30.2 - Promise chain</title>
+	</head>
+	<body>
+		<h1></h1>
 
-  <!-- Instructions
+		<!-- Instructions
 Write two functions that use Promises that you can chain.
 The first function, makeAllCaps(), will take in an array of words and capitalize
 them, and then the second function, sortWords(), will sort the words in
@@ -18,45 +18,50 @@ an error.
 Call the functions once with an array of words and call it once with an array
 that includes at least one item that is not a word. Print the resolve and reject
 in a .then, .catch. -->
-<script>
-  const makeAllCaps= function(arrOfWords){
-    return allCaps = new Promise(function(resolved,reject){
-      if (arrOfWords.every((x)=> typeof x === 'string')){
-        resolved(arrOfWords.map((x)=> x.toUpperCase()))
-      }
-      reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr from make');
-    })
 
-  };
-  const sortWords = function(arrOfWords){
-    return sorted = new Promise(function(resolved,reject){
-        resolved(arrOfWords.sort())
-        reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr from sort');
-    })
-  }
+		<h1>🏊</h1>
+		<script>
+			//!dds
+			// ?dsd
+			const makeAllCaps= function(arrOfWords){
+			  return allCaps = new Promise(function(resolved,reject){
+			    if (arrOfWords.every((x)=> typeof x === 'string')){
+			      resolved(arrOfWords.map((x)=> x.toUpperCase()))
+			    }
+			    reject('errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr from make');
+			  })
 
-  const listy = ['iftach','gali','yaar'];
-  const listy2 = [1,'iftach','gali','yaar'];
-  // call's
-  
-  const call = makeAllCaps(listy)
-  .then(function(s){
-    sortWords(s).then(function(a){
-      console.log(a);
-    })
-  }).catch(function(s){
-    console.log(s);
-  });
-  
-  const call2 = makeAllCaps(listy2)
-  .then(function(s){
-    sortWords(s).then(function(a){
-      console.log(a);
-    })
-  }).catch(function(s){
-    console.log(s);
-  });
-</script>
+			};
+				const sortWords = function (arrOfWords) {
+					return (sorted = new Promise(function (resolved, reject) {
+						resolved(arrOfWords.sort());
+						reject("errrrrrrrrrrrrrrrrrrrrrrrrrrrrrr from sort");
+					}));
+				};
 
-</body>
+				const listy = ["iftach", "gali", "yaar"];
+				const listy2 = [1, "iftach", "gali", "yaar"];
+				// call's
+
+				const call = makeAllCaps(listy)
+					.then(function (s) {
+						sortWords(s).then(function (a) {
+							console.log(a);
+						});
+					})
+					.catch(function (s) {
+						console.log(s);
+					});
+
+				const call2 = makeAllCaps(listy2)
+					.then(function (s) {
+						sortWords(s).then(function (a) {
+							console.log(a);
+						});
+					})
+			}).catch(function(s){
+			  console.log(s);
+			});
+		</script>
+	</body>
 </html>

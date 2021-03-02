@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>34.1 - star wars</title>
+	</head>
+	<body>
+		<!-- Instructions
+      We are going to use this star wars api to get information.
+      We want to get information of 10 characters.
+      We want the following information:
+      1. Name
+      2. Height
+      3. Hair Color
+      4. Planet they came from
+      5. Planet population
+      We want you to create an array of objects that will store all of this
+      information.
+      Create the object structure like this: -->
+		<!-- Note:
+      The value of the key Planet is an object.
+      We want to place it dynamically into the DOM without using any HTML.
+      Create a table using pure JavaScript and place the information there.
+      For example: -->
+		<script>
+			const body = document.querySelector("body");
+			const heading = document.createElement("h1");
+			heading.innerHTML = `🏊 `;
+			const apiUrl = "https://swapi.dev/api/";
+
+			const rangeCharacters = 10;
+			body.append(heading);
+
+			// table
+			const table = document.createElement("table");
+			table.style.border = "1px black solid";
+			body.append(table);
+
+			for (let i = 0; i < rangeCharacters; i++) {
+				async function fetchData(num) {
+					const people = "people/";
+					const resp = await fetch(`${apiUrl}${people}${num}/`);
+					const data = await resp.json();
+					// console.log(data);
+					// return data;
+					// 1. Name
+					// 2. Height
+					// 3. Hair Color
+					// 4. Planet they came from
+					// 5. Planet population
+					const tr = await document.createElement(`tr`);
+					table.append(tr);
+					const listy = ["name", "height", "hair_color"];
+					for (let elm of listy) {
+						const td = document.createElement(`td`);
+						td.style.border = "1px black solid";
+
+						td.innerHTML = eval(`data.${elm}`);
+						tr.append(td);
+					}
+					const home = await fetch(`${data.homeworld}`);
+					const homeData = await home.json();
+          const td = document.createElement(`td`);
+						td.style.border = "1px black solid";
+
+						td.innerHTML = `${homeData.name}`;
+						tr.append(td);
+          // console.log(homeData.name);
+					
+          const td2 = document.createElement(`td`);
+						td2.style.border = "1px black solid";
+
+						td2.innerHTML = `${homeData.population}`;
+						tr.append(td2);
+          // console.log(homeData.name);
+				}
+				fetchData(i + 1);
+			}
+			console.log(body);
+		</script>
+	</body>
+</html>

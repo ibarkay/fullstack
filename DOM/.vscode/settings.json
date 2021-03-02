@@ -1,0 +1,10 @@
+{
+  "eslint.format.enable": true,
+  "eslint.nodeEnv": "",
+  "eslint.options": {
+
+  
+  },
+  "eslint.run": "onSave",
+  "editor.formatOnSave": true
+}

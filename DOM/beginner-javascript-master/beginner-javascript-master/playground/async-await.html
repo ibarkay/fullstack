@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>Async Await</title>
+		<link rel="stylesheet" href="../base.css" />
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Async Await</title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+	<body>
+		<script>
+			function wait(ms = 0) {
+				return new Promise((resolve) => {
+					setTimeout(resolve, ms);
+				});
+			}
+			async function go() {
+				console.log("starting");
+				await wait(2000);
+				console.log("running");
+				await wait(2000);
+				console.log("ending");
+			}
+			go();
 
-<body>
-  <script>
+			// func dec
+			async function fd() {}
 
-  </script>
-</body>
+			const arrowFn = async () => {};
 
+			window.addEventListener("click", async function () {});
+
+			const person = {
+				sayHi: async function () {},
+				async sayHello() {},
+        
+			};
+		</script>
+	</body>
 </html>

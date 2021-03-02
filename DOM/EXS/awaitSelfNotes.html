@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>async tries</title>
+	</head>
+	<body>
+		<h1></h1>
+		<script>
+			const title = document.querySelector("h1");
+			const wait = (ms = 0) =>
+				new Promise((resolve) => {
+					setTimeout(resolve, ms);
+				});
+
+			function sayHi() {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						resolve("hi 🏊 ");
+					}, 2000);
+				});
+			}
+
+			async function asyncCall() {
+				title.innerHTML = "🤙  calling ... ";
+				let w = await sayHi();
+				title.innerHTML = w;
+				await wait(2000);
+				title.innerHTML = "🏳 ";
+			}
+			asyncCall();
+		</script>
+	</body>
+</html>
