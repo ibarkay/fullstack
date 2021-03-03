@@ -27,7 +27,7 @@
 		<script>
 			const body = document.querySelector("body");
 			const heading = document.createElement("h1");
-			heading.innerHTML = `🏊 `;
+			heading.innerHTML = `🏊 🧟 🏃‍♀️ 🎾 `;
 			const apiUrl = "https://swapi.dev/api/";
 
 			const rangeCharacters = 10;
@@ -43,13 +43,7 @@
 					const people = "people/";
 					const resp = await fetch(`${apiUrl}${people}${num}/`);
 					const data = await resp.json();
-					// console.log(data);
-					// return data;
-					// 1. Name
-					// 2. Height
-					// 3. Hair Color
-					// 4. Planet they came from
-					// 5. Planet population
+
 					const tr = await document.createElement(`tr`);
 					table.append(tr);
 					const listy = ["name", "height", "hair_color"];
@@ -62,23 +56,21 @@
 					}
 					const home = await fetch(`${data.homeworld}`);
 					const homeData = await home.json();
-          const td = document.createElement(`td`);
-						td.style.border = "1px black solid";
+					const td = document.createElement(`td`);
+					td.style.border = "1px black solid";
 
-						td.innerHTML = `${homeData.name}`;
-						tr.append(td);
-          // console.log(homeData.name);
-					
-          const td2 = document.createElement(`td`);
-						td2.style.border = "1px black solid";
+					td.innerHTML = `${homeData.name}`;
+					tr.append(td);
 
-						td2.innerHTML = `${homeData.population}`;
-						tr.append(td2);
-          // console.log(homeData.name);
+					const td2 = document.createElement(`td`);
+					td2.style.border = "1px black solid";
+
+					td2.innerHTML = `${homeData.population}`;
+					tr.append(td2);
 				}
 				fetchData(i + 1);
 			}
-			console.log(body);
+			console.log(body, "🍕 ");
 		</script>
 	</body>
 </html>
