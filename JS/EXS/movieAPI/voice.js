@@ -14,7 +14,7 @@ function runSpeechRecognition() {
   };
 
   recognition.onspeechend = function () {
-    action.innerHTML = '<small>stopped listening, hope you are done...</small>';
+    action.innerHTML = '<small>👌 </small>';
     recognition.stop();
   };
 
