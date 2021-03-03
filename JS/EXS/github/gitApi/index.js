@@ -8,10 +8,16 @@ const boxy = document.createElement('div');
 boxy.classList.add('box');
 bod.append(boxy);
 let username = '';
+const listOfUseres = [];
 btnName.addEventListener('click', () => {
   username = nameInput.value;
-  console.log(nameInput.value);
   fetchData();
+});
+bod.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    username = nameInput.value;
+    fetchData();
+  }
 });
 
 async function fetchData() {
@@ -28,6 +34,12 @@ async function fetchData() {
   linky.href = `${data.html_url}`;
   linky.innerHTML = `${data.name}`;
 
-  divy.append(linky);
-  boxy.append(divy);
+  if (!listOfUseres.includes(`${data.name}`) && (!data.message) ) {
+    console.log(data);
+    divy.append(linky);
+    boxy.append(divy);
+  } else {
+    alert('user allready used ... or no such User 🔚 ');
+  }
+  listOfUseres.push(`${data.name}`);
 }
