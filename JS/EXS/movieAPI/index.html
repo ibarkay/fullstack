@@ -12,6 +12,8 @@
     <h1>🎥  Wellcome to search Movie API 🎥</h1>
     <input type="text" placeholder="Movie name">
     <button>Search</button>
+    <button type="button" onclick="runSpeechRecognition()">🔈  Speech to Text</button> &nbsp; <span id="action"></span>
+        <div id="output" class="hide"></div>
   </div>
   <div class="data-container"></div>
 
@@ -19,5 +21,6 @@
 
 
   <script src="./index.js"></script>
+  <script src="./voice.js"></script>
 </body>
 </html>

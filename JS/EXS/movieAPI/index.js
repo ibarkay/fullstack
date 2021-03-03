@@ -14,6 +14,7 @@ btn.addEventListener('click', () => {
 
 async function searchMovie(movie) {
   const resp = await fetch(`${apiRequests}t=${movie}`);
+  console.log(resp.ok);
   const data = await resp.json();
   if (data.Response === 'True') {
     console.log(data.Response);
@@ -51,7 +52,7 @@ async function searchMovie(movie) {
     infoToUser.append(ratings);
   } else {
     const titleMovie = document.createElement('h3');
-    titleMovie.innerHTML = `NOT FOUND ! 🚫  `;
+    titleMovie.innerHTML = 'NOT FOUND ! 🚫  ';
     infoToUser.append(titleMovie);
   }
 }

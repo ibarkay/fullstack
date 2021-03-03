@@ -22,6 +22,7 @@ bod.addEventListener('keydown', (e) => {
 
 async function fetchData() {
   const resp = await fetch(`${gitAPI}${username}`);
+  console.log(resp.ok);
   const data = await resp.json();
 
   const divy = document.createElement('div');
