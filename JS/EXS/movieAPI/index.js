@@ -51,7 +51,7 @@ async function searchMovie(movie) {
     infoToUser.append(ratings);
   } else {
     const titleMovie = document.createElement('h3');
-    titleMovie.innerHTML = `NOT FOUND ! 🥃 `;
+    titleMovie.innerHTML = `NOT FOUND ! 🚫  `;
     infoToUser.append(titleMovie);
   }
 }
