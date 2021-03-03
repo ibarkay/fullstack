@@ -1,5 +1,5 @@
 console.log('🏊 ');
-
+// ! TODO : error handling with catch...
 const gitAPI = 'https://api.github.com/users/';
 const btnName = document.querySelector('button');
 const nameInput = document.querySelector('input');
@@ -34,7 +34,7 @@ async function fetchData() {
   linky.href = `${data.html_url}`;
   linky.innerHTML = `${data.name}`;
 
-  if (!listOfUseres.includes(`${data.name}`) && (!data.message) ) {
+  if (!listOfUseres.includes(`${data.name}`) && (!data.message)) {
     console.log(data);
     divy.append(linky);
     boxy.append(divy);
