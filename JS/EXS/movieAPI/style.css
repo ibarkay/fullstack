@@ -1,3 +1,4 @@
+
 body {
 	background: black;
 	color: white;
@@ -32,13 +33,24 @@ button{
   width: 350px;
   height: 30px;
   border: 2px solid black;
-  transition: all ease-in-out 0.4s;
+  transition: all ease-in-out ;
+	display: block;
 }
 button:hover{
   background: rgb(45, 45, 247);
   cursor: pointer;
 }
+.rating{
+	border: 1px red solid;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	transform: translateX(200px);
+	
+}
 .data-container {
+	padding-top: 10px;
+	font-size: 0.8rem;
 	width: 80%;
 	/* border: 1px red solid; */
 	height: 400px;
