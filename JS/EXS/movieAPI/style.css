@@ -13,22 +13,47 @@ body {
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
+  
 }
 input {
-	width: 200px;
+	width: 350px;
+  height: 30px;
 	opacity: 0.9;
+  border: 2px rgba(0, 0, 255, 0.4) solid;
+  transition: all ease-in-out 0.5s;
+  text-align: center;
+}
+input:hover{
+  border: 2px rgba(0, 0, 255, 0.9) solid;
+}
+button{
+  background: blue;
+  color: white;
+  width: 350px;
+  height: 30px;
+  border: 2px solid black;
+  transition: all ease-in-out 0.4s;
+}
+button:hover{
+  background: rgb(45, 45, 247);
+  cursor: pointer;
 }
 .data-container {
 	width: 80%;
-	border: 1px red solid;
+	/* border: 1px red solid; */
 	height: 400px;
 	display: flex;
 	justify-content: center;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  overflow: hidden;
 }
 .data-container img {
 	width: 200px;
 	height: 200px;
+}
+.data-container p{
+  margin: 0;
+  padding: 0;
 }
