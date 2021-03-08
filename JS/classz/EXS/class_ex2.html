@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>class EX 2</title>
+	</head>
+	<body>
+		<h1></h1>
+
+		<script>
+			class Car {
+				constructor(brand, speed) {
+					this.brand = brand;
+					this.speed = speed;
+				}
+				getName() {
+					return this.brand;
+				}
+				getSpeed() {
+					return this.speed;
+				}
+				print() {
+					console.log(
+						`the carbrand is ${this.brand}, and the speed is ${this.speed}`
+					);
+				}
+				setSpeed(speed) {
+					this.speed = speed;
+				}
+			}
+
+			const audi = new Car("Audi", 120);
+			const subaro = new Car("Subaro", 100);
+			const fiat = new Car("fiat", 60);
+			const skoda = new Car("skoda", 200);
+
+			let carsArray = [audi, subaro, fiat, skoda];
+			// console.log(carsArray);
+			console.log(audi.getSpeed());
+			function slowest() {
+				carsArray.sort((a, b) => a.getSpeed() - b.getSpeed());
+				return carsArray[0];
+			}
+			function fastest() {
+				carsArray.sort((a, b) => b.getSpeed() - a.getSpeed());
+				return carsArray[0];
+			}
+		</script>
+	</body>
+</html>
