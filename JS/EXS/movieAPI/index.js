@@ -4,6 +4,7 @@ const apiRequests = `http://www.omdbapi.com/?apikey=${token}&`;
 const userInput = document.querySelector('input');
 const btn = document.querySelector('button');
 const infoToUser = document.querySelector('.data-container');
+const bod = document.querySelector('body');
 
 btn.addEventListener('click', () => {
   console.log('clicked 🏊 ');
@@ -25,6 +26,8 @@ async function searchMovie(movie) {
     const imgPoster = document.createElement('img');
     imgPoster.src = poster;
     infoToUser.append(imgPoster);
+    // console.log(poster);
+    // bod.style.background = `url('${poster}') no-repeat center/cover`;
     // ! title ,year
     const titleMovie = document.createElement('h3');
     titleMovie.innerHTML = `${data.Title} , ${data.Year}`;

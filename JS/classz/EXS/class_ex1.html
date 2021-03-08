@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>class EX 1</title>
+	</head>
+	<body>
+		<h1></h1>
+		<!-- Instructions
+  1 .מחלקה כתוב Animal , חיה מייצגת המחלקה כלשהי.
+  הבאים המחלקה משתני את יהיו למחלקה :
+  - name - החיה שם
+  - sound החיה קול
+  2 .משמיעה שהיא הקול ואת החיה שם את המקבל בנאי צור
+  3 .במחלקה פעולה צור getName החיה שם את המחזירה
+  4 .במחלקה פעולה צור getSound החיה קול את המחזירה
+  5 .פעולה צור print החיה נתוני את המדפיסה
+  6 .צור 3 שונות חיות -->
+		<script>
+			const hOne = document.querySelector("h1");
+
+			class Animal {
+				constructor(name, sound) {
+					this.name = name;
+					this.sound = sound;
+				}
+				playSound() {
+					return this.sound;
+				}
+				getName() {
+					return this.name;
+				}
+				getSound() {
+					return this.sound;
+				}
+				print() {
+					hOne.innerHTML = `${this.name} making a ${this.sound} sound`;
+				}
+			}
+
+			const cat = new Animal("cat", "Meeewwwwwooo");
+			const dog = new Animal("Dog", "uuuf uuuuff uf");
+			const fish = new Animal("Fish", "...");
+		</script>
+	</body>
+</html>
