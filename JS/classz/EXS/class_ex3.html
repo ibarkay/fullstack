@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>class EX 3</title>
+	</head>
+	<body>
+		<h1></h1>
+
+		<script>
+			class SortNumber {
+				constructor(numList) {
+					this.numList = [];
+				}
+				addNum(num) {
+					try {
+						this.numList.push(num);
+						return true;
+					} catch {
+						return false;
+					}
+				}
+				removeNum(num) {
+					if (this.numList.includes(num)) {
+						numList.remove(num);
+						return true;
+					} else {
+						return false;
+					}
+				}
+				getAll() {
+					return this.numList;
+				}
+				share(SN) {
+					let sharing = [];
+					for (let num of this.getAll()) {
+						for (let num2 of SN.getAll()) {
+							// debugger;
+							if (num === num2 && !sharing.includes(num)) {
+								sharing.push(num);
+							}
+						}
+					}
+					return sharing;
+				}
+				union(SN) {
+					let unions = [];
+					unions = SN.getAll().concat(this.getAll());
+					let unionsRet = new Set(unions);
+					unionsRet = Array.from(unionsRet);
+					return unionsRet;
+				}
+				print() {
+					console.log(this.numList);
+				}
+			}
+
+			const nums1 = new SortNumber();
+			nums1.addNum(1);
+			nums1.addNum(7);
+			nums1.addNum(3);
+			nums1.addNum(4);
+			nums1.print();
+
+			const nums2 = new SortNumber();
+			nums2.addNum(6);
+			nums2.addNum(7);
+			nums2.addNum(9);
+			nums2.addNum(0);
+			nums2.print();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>class EX 4 - point and worldPoint</title>
+	</head>
+	<body>
+		<h1></h1>
+
+		<script>
+			class Point {
+				constructor(x, y) {
+					this.x = x;
+					this.y = y;
+				}
+				getX() {
+					return this.x;
+				}
+				getY() {
+					return this.y;
+				}
+				addToX(num) {
+					this.x += num;
+				}
+				addToy(num) {
+					this.y += num;
+				}
+				setX(num) {
+					this.x = num;
+				}
+				setY(num) {
+					this.y = num;
+				}
+				addPoint(P) {
+					this.x += P.x;
+					this.y += P.y;
+				}
+				isSame(P) {
+					if (this.x === P.x && this.y === P.y) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+				print() {
+					console.log(this.x, this.y);
+				}
+			}
+
+			const p1 = new Point(10, 30);
+			const p2 = new Point(40, -10);
+			const p3 = new Point(10, 30);
+
+			class PointWorld {
+				constructor() {
+					this.pointsList = [];
+				}
+				sortByY() {
+					const sortedY = this.pointsList.sort((a, b) => a.y - b.y);
+				}
+				addToPoints(p) {
+					this.pointsList.push(p);
+				}
+				uniq() {
+					let listy = {};
+					for (let point of this.pointsList) {
+						listy[`${point}`] = null;
+					}
+					listy = Array.from(Object.keys(listy));
+					return listy;
+				}
+				sumXs() {}
+			}
+			const pw1 = new PointWorld();
+			pw1.addToPoints([10, 10]);
+			pw1.addToPoints([10, 10]);
+			pw1.addToPoints([10, 1]);
+			pw1.addToPoints([10, 17]);
+			pw1.addToPoints([10, 1]);
+			console.log("before uniq", pw1.pointsList);
+			console.log(pw1.uniq());
+		</script>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>class EX 6 Hotel and room</title>
+	</head>
+	<body>
+		<h1></h1>
+
+		<script>
+			class Hotel {
+				constructor() {
+					this.roomList = [];
+				}
+				addRoom(r) {
+					if (!this.roomList.includes(r)) {
+						this.roomList.push(r);
+						return true;
+					} else {
+						return false;
+					}
+				}
+				addNewRoom(id, lev, amo) {
+					let newRoom = new Room(id, lev, amo);
+					for (let r of this.roomList) {
+						if (r.roomId === newRoom.roomId) {
+							return false;
+						}
+					}
+					this.roomList.push(newRoom);
+					return true;
+				}
+
+				removeRoom(id) {
+					for (let r of this.roomList) {
+						if (id === r.roomId) {
+							this.roomList.remove(r);
+							return true;
+						}
+					}
+					return false;
+				}
+				checkFreeRooms(amount) {
+					return this.roomList.filter((x) => x.amount <= amount);
+				}
+				checkIn(id, amount) {
+					for (let r of this.roomList) {
+						if (r.roomId === id && r.amount <= amount) {
+							r.isFree = false;
+							return true;
+						}
+					}
+					return false;
+				}
+				highRoomFree() {
+					let retArray = new Array.from(this.roomList);
+					retArray = retArray.sort((a, b) => a.level - b.level);
+					retArray = retArray.sort((a, b) => a.amount - b.amount);
+					return retArray;
+				}
+				getAllRomms(isFree) {
+					return this.roomList.filter((x) => x.isFree === "true");
+				}
+			}
+
+			class Room {
+				constructor(roomId, level, amount) {
+					this.roomId = roomId;
+					this.level = level;
+					this.amount = amount;
+					this.isFree = false;
+				}
+				getAmmount(num) {
+					if (num <= this.amount) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+				printRoom() {
+					console.log(
+						`Room #${this.roomId} is in ${this.level} and can hold ${this.amount} guests . is-free : ${this.isFree}`
+					);
+				}
+			}
+
+			const r1 = new Room(0, 1, 4);
+			const hotel = new Hotel();
+			console.log(hotel);
+			hotel.addRoom(r1);
+			console.log(hotel);
+			
+
+		</script>
+	</body>
+</html>
