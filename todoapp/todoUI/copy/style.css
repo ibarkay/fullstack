@@ -1,0 +1,92 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-user,
+.edit-pop{
+  width: 50vw;
+  height: 50vh;
+  border: 2px black solid;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #c6c6c6;
+  visibility: hidden;
+}
+
+input#txt,input#editTxt{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  
+}
+.btn-submit,.btn-edit{
+  margin: 0.4rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  background: #868585;
+}
+.main-con{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.todos-con{
+  width: 60vw;
+  height: 90vh;
+  border: 1px black solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.card {
+  width: 95%;
+  height: 9rem;
+  margin: 0.2rem;
+  background: #c6c6c6;
+  border: 1px black dotted;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around ;
+  text-align: left;
+}
+input[type='checkbox']{
+  font-size: 10rem;
+}
+.heading{
+  display: flex;
+  flex-direction: column;
+  
+}
+.plus-btn,.display-all-btn {
+  width: 100px;
+  height: 100px;
+  border: 1px black solid;
+  background: green;
+  border-radius: 50%;
+  position: absolute;
+  right: 15rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+}
+.display-all-btn{
+  left: 10rem;
+}
