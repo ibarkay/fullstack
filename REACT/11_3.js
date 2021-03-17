@@ -48,7 +48,7 @@ class TextArea extends Component {
 }
 class Button extends Component {
 	render() {
-		return <button onClick={this.props.onSubmit}>click</button>;
+		return <button>click</button>;
 	}
 }
 
@@ -60,6 +60,10 @@ export default class App extends Component {
 		txt: "",
 	};
 	// !
+	onFormSubmit = (e) => {
+		e.preventDefault();
+		alert("you are submiting :" + JSON.stringify(this.state));
+	};
 	changeState = async (e) => {
 		const k = e.name;
 		const v = e.value;
@@ -69,7 +73,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div>
-				<form onSubmit={this.changeState}>
+				<form onSubmit={this.onFormSubmit}>
 					<Input
 						name="firstName"
 						value={this.state.firstName}
