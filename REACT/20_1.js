@@ -13,7 +13,7 @@ const Toggle = () => {
 		const source = CancelToken.source();
 
 		const getData = async () => {
-			const resp = await axios.get(apiUrl); //{ cancelToken: source.token }
+			const resp = await axios.get(apiUrl, { cancelToken: source.token }); //{ cancelToken: source.token }
 
 			setData(resp.data.params);
 		};
