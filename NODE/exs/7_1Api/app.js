@@ -2,6 +2,7 @@ const axios = require("axios");
 const url = "https://dog.ceo/api/breeds/image/random";
 const fetch = require("node-fetch");
 const https = require("https");
+const request = require("request");
 
 const fetchAxious = async () => {
 	const resp = await axios.get(url);
@@ -22,4 +23,14 @@ const httpsFetch = () => {
 	console.log(resp);
 };
 
-httpsFetch();
+// httpsFetch();
+
+const requestFetch = () => {
+	request(url, function (error, response, body) {
+		console.error("error:", error); // Print the error if one occurred
+		console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
+		console.log("body:", body); // Print the HTML for the Google homepage.
+	});
+};
+
+requestFetch();
