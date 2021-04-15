@@ -17,6 +17,7 @@ const addUser = (userObj) => {
 	const isEexist = db.find((user) => user.passportid === userObj.passportid);
 	if (!isEexist) {
 		db.push(userObj);
+
 		fs.writeFileSync("./db/db.json", JSON.stringify(db));
 		return "User added";
 	} else {

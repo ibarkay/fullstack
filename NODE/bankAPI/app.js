@@ -99,7 +99,11 @@ app.get("/users/np/:p", (req, res) => {
 		res.status(400).send(e.message);
 	}
 });
-
+// TODO:ninja
+// Ninja:
+// Add a new field for a user: IsActiveIsActive determines if the account is active or not.
+// 1. If the user is not active, you cannot do anything with that user.
+// 2. Fetch the users that are active and have a specified amount of cash.
 // *listener
 app.listen(3000, () => {
 	console.log(
