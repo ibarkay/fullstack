@@ -1,0 +1,26 @@
+use findMyRestaurant ,
+db.createCollection('resturants') ,
+db.resturants.insertMany([{name:"bombay",address:{city:"Holon",street:"Herzel15",coordinates:[-77.46574,40.6774],},cuisine:"indian",kosher:true,reviews:[{date:newDate("2016-01-01"),score:7,},{date:newDate("2019-01-01"),score:3,},{date:newDate("2018-01-01"),score:8,},],},{name:"falafel5shekels",address:{city:"Bat-Yam",street:"Histradrut85",coordinates:[-70.46574,10.6774],},cuisine:"streetfood",kosher:false,reviews:[{date:newDate("2019-01-01"),score:3,},{date:newDate("2016-01-01"),score:8,},{date:newDate("2020-01-01"),score:4,},],},{name:"asiandelight",address:{city:"TelAviv",street:"Balfur15",coordinates:[-10.46574,30.6774],},cuisine:"asian",kosher:true,reviews:[{date:newDate("2020-01-01"),score:3,},{date:newDate("2018-01-01"),score:8,},{date:newDate("2016-01-01"),score:9,},],},{name:"coconutjam",address:{city:"TelAviv",street:"StamAdress15",coordinates:[20.46574,-40.6774],},cuisine:"african",kosher:true,reviews:[{date:newDate("2017-01-01"),score:10,},{date:newDate("2016-01-01"),score:8,},{date:newDate("2019-01-01"),score:6,},],},{name:"riceandnoodles",address:{city:"Holon",street:"BlaBla15",coordinates:[20.46574,10.6774],},cuisine:"asian",kosher:false,reviews:[{date:newDate("2016-01-01"),score:1,},{date:newDate("2019-01-01"),score:6,},{date:newDate("2019-01-01"),score:2,},],},{name:"thailandparadise",address:{city:"Holon",street:"Bla13",coordinates:[-77.46574,40.6774],},cuisine:"asian",kosher:false,reviews:[{date:newDate("2020-01-01"),score:7,},{date:newDate("2019-01-01"),score:6,},{date:newDate("2020-01-01"),score:2,},],},]),
+db.resturants.find() ,
+db.resturants.find({cuisine:'indian'}),
+db.resturants.find({kosher:true}),
+db.resturants.find({"address.city":"Tel Aviv"}).pretty(),
+db.resturants.find({"address.city":{$in:["Tel Aviv","Holon"]}}).pretty(),
+db.resturants.find({"address.coordinates":[-77.46574,40.6774]}),
+db.resturants.find().sort({name:1}).pretty(),
+db.resturants.find().sort({"address.city":1}).pretty(),
+db.restaurants.update({name: "iftach"}, {name: "iftachy"})
+db.restaurants.update({name: "coconut jam"}, {$push:{"reviews": {"data":1.1, "score":10}}})
+db.restaurants.updateMany({}, {$set:{"kosher":false}})
+db.restaurants.remove({name: "bombay"})
+db.restaurants.remove({})
+db.restaurants.update({name: "coconut jam"}, {$inc: {[reviews.0.score]:2}})
+db.restaurants.update({name: "coconut jam"}, {$inc: {[reviews.0.score]:-2}})
+db.restaurants.find().forEach( function (res) {print ("restaurant: " + res.name);});
+db.restaurants.find().forEach( function (res) {print ("restaurant: " + res.address && res.address.city);});
+db.restaurants.find().forEach( function (res) {print ("restaurant: " + res.address.coordinates);});
+db.restaurants.find({name:{$regex: /^asian/ }}).pretty()
+db.restaurants.count()
+db.restaurants.find({"reviews.date":new Date("2016-01-01")}).pretty()
+db.restaurants.aggregate([{$group:{ "_id":null, "avg":{ $avg:"$reviews.score"}}}])
+db.restaurants.aggregate([{$project:{ "Average rate": { $avg: "$reviews.score" }}}])
